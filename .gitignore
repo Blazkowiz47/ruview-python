@@ -1,0 +1,43 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments and local package output
+.venv/
+.env
+.env.*
+!.env.example
+dist/
+build/
+*.egg-info/
+
+# uv / packaging scratch
+.uv-cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and runtime scratch
+*.log
+tmp/
+temp/
+
+# Large local research captures; keep directory placeholders tracked.
+data/recordings/*
+!data/recordings/.gitkeep

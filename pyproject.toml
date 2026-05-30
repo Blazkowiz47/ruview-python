@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ruview-python"
+version = "0.1.0"
+description = "Pure Python research port of RuView / WiFi-DensePose"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Research use" }
+authors = [{ name = "Sushrut Patwardhan" }]
+dependencies = [
+  "blake3>=1.0",
+  "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+research = [
+  "fastapi>=0.115",
+  "hypothesis>=6.100",
+  "ipywidgets>=8.0",
+  "jupyterlab>=4.0",
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "pandas>=2.2",
+  "plotly>=5.20",
+  "scikit-learn>=1.4",
+  "scipy>=1.13",
+  "seaborn>=0.13",
+  "websockets>=13.0",
+]
+nn = [
+  "torch>=2.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ruview"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
