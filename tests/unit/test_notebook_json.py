@@ -9,6 +9,7 @@ from pathlib import Path
 VISUAL_LAB_NOTEBOOKS = {
     "00_signal_playground.ipynb",
     "01_empty_room_vs_person_present.ipynb",
+    "02_motion_vs_stillness.ipynb",
     "05_subcarrier_heatmaps.ipynb",
 }
 
