@@ -37,6 +37,9 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Expanded `README.md` to describe the Python research port, project goals, layout, current status, and acknowledgements to upstream `ruvnet/RuView` / rUv with MIT license notice.
 - After user ran `git init`, expanded `.gitignore` for Python caches, local virtualenvs, `uv` scratch, notebook checkpoints, editor files, logs, and local large recordings while keeping `data/recordings/.gitkeep` trackable.
 - Set repo-local `user.name` to `Sushrut Patwardhan` so the first commit can use the existing configured email.
+- Completed Milestone 4 via two clean worker commits:
+  - `600cd74` adds `src/ruview/signal/baseline.py`, `motion.py`, `presence.py`, exports, and presence/motion tests.
+  - `589a1eb` updates `notebooks/02_motion_vs_stillness.ipynb`, adds `docs/porting/presence-motion.md`, notebook JSON coverage, and a worker memory note.
 
 ## Experiments / Runs
 
@@ -60,7 +63,11 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: synthetic in-test CSI frame fixtures
 - Output path: pre-commit verification
 - Result: tests still pass (`9 passed`) after `.gitignore` updates.
-- Next action: Start Milestone 2 ESP32 host-side protocol parsers and packet fixtures.
+- Command/config: `uv run pytest -q`
+- Dataset: deterministic synthetic CSI empty-room, person-present, stillness, and walking windows
+- Output path: Milestone 4 classifier and notebook verification
+- Result: tests pass (`41 passed`) after classifier and motion notebook commits.
+- Next action: Start Milestone 5 vitals with breathing/heart-rate band estimators and notebook `03_breathing_and_heart_rate_bands.ipynb`.
 
 ## Analysis Results
 
@@ -68,12 +75,14 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - The port should prioritize readable implementations, fixtures, tests, and notebooks over product packaging or commercial polish.
 - Rust `wifi-densepose-core` canonical frame layout uses UUID bytes, fixed little-endian metadata fields, length-prefixed UTF-8 device id, 16 zero bytes for missing calibration id, `(nrows, ncols)` as `u32`, and stream-major complex samples as `f64 re || f64 im`.
 - Python `CsiFrame` deep-copies metadata on construction to better match Rust ownership/move behavior and prevent accidental witness-hash changes from later external metadata mutation.
+- Milestone 4 intentionally ports the Rust motion detector conceptually: weighted variance, temporal delta, phase variance, and subcarrier variance components with baseline-relative thresholds, plus debounce for human-readable empty/still/moving states.
 
 ## Learnings
 
 - Memory should track capability-level port progress, source-reference mappings, intentional deviations from Rust/C behavior, and parity-test outcomes.
 - Keep core install light (`numpy`, `blake3`) and put heavy research dependencies behind optional extras so parity tests stay fast.
 - Use `uv sync --extra dev` and `uv run pytest -q` as the default local workflow.
+- Synthetic presence/motion thresholds are useful for visual lab progress, but real ESP32 captures are still needed before treating scores as calibrated.
 
 ## Decisions
 
@@ -81,9 +90,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- ESP32 packet parser fixtures have not been chosen yet.
+- No current blocker for Milestone 5; vitals modules need to be ported from the Rust reference.
 
 ## Next
 
-- Start Milestone 2 by mapping `firmware/esp32-csi-node/main/csi_collector.c`, `stream_sender.c`, and the Rust hardware/sensing parser code into Python parser fixtures.
-- Add binary fixture tests for raw CSI, edge vitals, WASM event, and sync packet magic values.
+- Start Milestone 5 by mapping `v2/crates/wifi-densepose-vitals` and `sensing-server/src/vital_signs.rs` into Python vital preprocessing, bandpass/PSD estimators, confidence labels, tests, docs, and `03_breathing_and_heart_rate_bands.ipynb`.

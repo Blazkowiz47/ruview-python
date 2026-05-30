@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-3-complete
+Status: milestone-4-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 3 is implemented: signal primitives, deterministic synthetic CSI scenarios, visual lab notebooks, and notebook JSON checks are committed. Parent verification: `uv run pytest -q` (`37 passed`) and `examples/simulate_empty_vs_present.py --frames 16 --seed 42` produced separated empty/present/still/walking summary stats.
-Current blocker: Milestone 4 presence/motion classifiers and adaptive threshold experiments have not started.
-Next action: Start Milestone 4 with motion score, presence classification, moving-vs-still heuristics, rolling baseline, smoothing/debounce, and notebook `02_motion_vs_stillness.ipynb`.
+Latest useful result: Milestone 4 is implemented: motion score, presence classification, rolling baseline, adaptive threshold helper, debounce, docs, and `02_motion_vs_stillness.ipynb` are committed. Parent verification: `uv run pytest -q` (`41 passed`).
+Current blocker: Milestone 5 vitals modules and `03_breathing_and_heart_rate_bands.ipynb` have not started.
+Next action: Start Milestone 5 with CSI vital preprocessing, breathing and heart-rate band estimators, confidence/quality labels, smoothing buffers, tests, docs, and notebook coverage.
 
 ## Active Threads
 
@@ -28,6 +28,7 @@ Next action: Start Milestone 4 with motion score, presence classification, movin
 - 2026-05-31: User initialized Git; expanded `.gitignore` for Python, `uv`, notebook, editor, and local recording artifacts; verified with `uv run pytest -q` before first commit.
 - 2026-05-31: Completed Milestone 2 in three commits: `dfb9e92` UDP receiver/replay helpers, `8b8e803` ESP32 packet parsers, `d123164` ESP32 packet docs/notebook checks. Parent verification: `uv run pytest -q` (`24 passed`) and 11 notebooks validated as JSON.
 - 2026-05-31: Completed Milestone 3 in three commits: `0ab43fe` signal primitives, `efd73d5` synthetic CSI simulator, `58c783d` visual lab notebooks. Parent verification: `uv run pytest -q` (`37 passed`) and synthetic example run with seed 42.
+- 2026-05-31: Completed Milestone 4 in two worker commits: `600cd74` presence/motion classifiers and `589a1eb` motion visual notebook/docs. Parent verification: `uv run pytest -q` (`41 passed`).
 
 ## Recent Runs
 

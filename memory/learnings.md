@@ -13,10 +13,11 @@ Durable findings from this project. Keep this compact and useful for future work
 - ESP32 magic `0xC5110004` is ambiguous in the reference tree: `edge_processing.h` uses it for fused vitals while `wasm_runtime.h` uses it for WASM output. The current Python Milestone 2 parser implements the plan-requested WASM output shape and documents the collision.
 - The first Python signal API deliberately favors compact NumPy primitives over the full Rust PSD/Doppler/correlation feature stack: `CsiWindow` uses `[time, stream, subcarrier]`, motion energy is mean squared temporal amplitude delta, and `subcarrier_variance` averages non-subcarrier axes by default.
 - Synthetic CSI scenarios now provide deterministic empty-room, person-present, stillness, and walking windows. They are visual/debug fixtures, not calibrated RF channel models.
+- Milestone 4 presence/motion uses deterministic NumPy heuristics rather than a trained detector: rolling baseline stats, positive relative increases, weighted motion components, and debounce are enough to separate the current synthetic empty/still/walking scenarios.
 
 ## Likely But Needs Verification
 
-- Milestone 2 should begin with small handcrafted binary packet fixtures before adding live UDP capture.
+- Real ESP32 captures will be needed to tune Milestone 4 thresholds beyond the synthetic simulator.
 
 ## Failed Approaches
 

@@ -10,6 +10,7 @@ Track experiments, long-running jobs, evaluations, and important development run
 | 2026-05-31 | sushruts-macbook-pro | main / pre-initial-commit | `uv run pytest -q` | synthetic CSI and pose fixtures | pre-commit verification | `9 passed` after `.gitignore` expansion | Commit initial scaffold |
 | 2026-05-31 | sushruts-macbook-pro | master / d123164 | `uv run pytest -q`; `uv run python` JSON notebook validation | handcrafted ESP32 packet tests, UDP socket tests, core fixtures, notebooks | `src/ruview/protocols/esp32.py`, `src/ruview/hardware/udp_receiver.py`, `docs/porting/esp32-protocols.md`, notebooks | `24 passed`; 11 notebooks valid JSON | Start Milestone 3 signal visual lab |
 | 2026-05-31 | sushruts-macbook-pro | master / 58c783d | `uv run pytest -q`; `uv run python examples/simulate_empty_vs_present.py --frames 16 --seed 42` | deterministic synthetic CSI windows | `src/ruview/signal/`, `src/ruview/hardware/simulator.py`, notebooks `00`, `01`, `05` | `37 passed`; empty mean `0.998`, present `1.275`, walking temporal variance `0.01483` vs empty `0.00038` | Start Milestone 4 presence/motion |
+| 2026-05-31 | sushruts-macbook-pro | master / 589a1eb | `uv run pytest -q` | deterministic synthetic CSI empty, present, stillness, walking windows | `src/ruview/signal/{baseline,motion,presence}.py`, `notebooks/02_motion_vs_stillness.ipynb`, `docs/porting/presence-motion.md` | `41 passed`; motion and presence tests order empty < present < walking and classify empty/still/moving | Start Milestone 5 vitals |
 
 ## Notes
 
