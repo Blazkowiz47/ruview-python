@@ -40,6 +40,9 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Completed Milestone 4 via two clean worker commits:
   - `600cd74` adds `src/ruview/signal/baseline.py`, `motion.py`, `presence.py`, exports, and presence/motion tests.
   - `589a1eb` updates `notebooks/02_motion_vs_stillness.ipynb`, adds `docs/porting/presence-motion.md`, notebook JSON coverage, and a worker memory note.
+- Completed Milestone 5 via two clean worker commits:
+  - `cd5f90a` adds `src/ruview/vitals/` preprocessing, breathing, heart-rate, quality, smoothing modules, exports, and vitals tests.
+  - `6750d38` updates `notebooks/03_breathing_and_heart_rate_bands.ipynb`, adds `docs/porting/vitals.md`, notebook JSON coverage, and a worker memory note.
 
 ## Experiments / Runs
 
@@ -67,7 +70,11 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: deterministic synthetic CSI empty-room, person-present, stillness, and walking windows
 - Output path: Milestone 4 classifier and notebook verification
 - Result: tests pass (`41 passed`) after classifier and motion notebook commits.
-- Next action: Start Milestone 5 vitals with breathing/heart-rate band estimators and notebook `03_breathing_and_heart_rate_bands.ipynb`.
+- Command/config: `uv run pytest -q`
+- Dataset: deterministic sine residuals and synthetic vital notebook fixtures
+- Output path: Milestone 5 vitals API and notebook verification
+- Result: tests pass (`52 passed`); unit tests estimate breathing near 18 BPM and heart near 72 BPM as valid.
+- Next action: Start Milestone 6 calibration/baseline drift with notebook `06_calibration_baseline_drift.ipynb`.
 
 ## Analysis Results
 
@@ -76,6 +83,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Rust `wifi-densepose-core` canonical frame layout uses UUID bytes, fixed little-endian metadata fields, length-prefixed UTF-8 device id, 16 zero bytes for missing calibration id, `(nrows, ncols)` as `u32`, and stream-major complex samples as `f64 re || f64 im`.
 - Python `CsiFrame` deep-copies metadata on construction to better match Rust ownership/move behavior and prevent accidental witness-hash changes from later external metadata mutation.
 - Milestone 4 intentionally ports the Rust motion detector conceptually: weighted variance, temporal delta, phase variance, and subcarrier variance components with baseline-relative thresholds, plus debounce for human-readable empty/still/moving states.
+- Milestone 5 intentionally uses compact NumPy FFT/PSD peak scoring rather than line-by-line streaming Rust filters; this keeps the core install light while preserving the ADR-021 breathing and heart-rate bands.
 
 ## Learnings
 
@@ -83,6 +91,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Keep core install light (`numpy`, `blake3`) and put heavy research dependencies behind optional extras so parity tests stay fast.
 - Use `uv sync --extra dev` and `uv run pytest -q` as the default local workflow.
 - Synthetic presence/motion thresholds are useful for visual lab progress, but real ESP32 captures are still needed before treating scores as calibrated.
+- Synthetic vitals fixtures are enough for API smoke tests and visual notebooks, but confidence/status thresholds remain uncalibrated until real CSI captures are available.
 
 ## Decisions
 
@@ -90,8 +99,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 5; vitals modules need to be ported from the Rust reference.
+- No current blocker for Milestone 6; calibration and baseline drift modules need to be ported from the Rust reference.
 
 ## Next
 
-- Start Milestone 5 by mapping `v2/crates/wifi-densepose-vitals` and `sensing-server/src/vital_signs.rs` into Python vital preprocessing, bandpass/PSD estimators, confidence labels, tests, docs, and `03_breathing_and_heart_rate_bands.ipynb`.
+- Start Milestone 6 by mapping `v2/crates/wifi-densepose-signal/src/ruvsense/calibration.rs` and `field_model.rs` into Python empty-room baselines, Welford stats, deviation scoring, drift triggers, save/load helpers, tests, docs, and `06_calibration_baseline_drift.ipynb`.

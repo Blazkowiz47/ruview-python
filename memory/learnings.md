@@ -14,10 +14,12 @@ Durable findings from this project. Keep this compact and useful for future work
 - The first Python signal API deliberately favors compact NumPy primitives over the full Rust PSD/Doppler/correlation feature stack: `CsiWindow` uses `[time, stream, subcarrier]`, motion energy is mean squared temporal amplitude delta, and `subcarrier_variance` averages non-subcarrier axes by default.
 - Synthetic CSI scenarios now provide deterministic empty-room, person-present, stillness, and walking windows. They are visual/debug fixtures, not calibrated RF channel models.
 - Milestone 4 presence/motion uses deterministic NumPy heuristics rather than a trained detector: rolling baseline stats, positive relative increases, weighted motion components, and debounce are enough to separate the current synthetic empty/still/walking scenarios.
+- Milestone 5 vitals ports the Rust ADR-021 pipeline conceptually with NumPy FFT/PSD helpers instead of exact streaming Rust IIR/FIR/autocorrelation internals. Unit fixtures estimate 18 BPM breathing and 72 BPM heart rate, while notebook confidence remains a tuning signal rather than a calibrated clinical result.
 
 ## Likely But Needs Verification
 
 - Real ESP32 captures will be needed to tune Milestone 4 thresholds beyond the synthetic simulator.
+- Real ESP32 captures will also be needed to tune vitals confidence thresholds, especially the heart-rate path where synthetic visual fixtures can detect the right peak but still report low confidence.
 
 ## Failed Approaches
 

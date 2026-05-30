@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-4-complete
+Status: milestone-5-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 4 is implemented: motion score, presence classification, rolling baseline, adaptive threshold helper, debounce, docs, and `02_motion_vs_stillness.ipynb` are committed. Parent verification: `uv run pytest -q` (`41 passed`).
-Current blocker: Milestone 5 vitals modules and `03_breathing_and_heart_rate_bands.ipynb` have not started.
-Next action: Start Milestone 5 with CSI vital preprocessing, breathing and heart-rate band estimators, confidence/quality labels, smoothing buffers, tests, docs, and notebook coverage.
+Latest useful result: Milestone 5 is implemented: CSI vital preprocessing, breathing and heart-rate estimators, confidence/quality labels, smoothing buffers, docs, and `03_breathing_and_heart_rate_bands.ipynb` are committed. Parent verification: `uv run pytest -q` (`52 passed`).
+Current blocker: Milestone 6 calibration/baseline drift modules and `06_calibration_baseline_drift.ipynb` have not started.
+Next action: Start Milestone 6 with empty-room baseline recording, Welford running stats, amplitude/phase baselines, deviation score, drift trigger, baseline save/load, tests, docs, and notebook coverage.
 
 ## Active Threads
 
@@ -29,6 +29,7 @@ Next action: Start Milestone 5 with CSI vital preprocessing, breathing and heart
 - 2026-05-31: Completed Milestone 2 in three commits: `dfb9e92` UDP receiver/replay helpers, `8b8e803` ESP32 packet parsers, `d123164` ESP32 packet docs/notebook checks. Parent verification: `uv run pytest -q` (`24 passed`) and 11 notebooks validated as JSON.
 - 2026-05-31: Completed Milestone 3 in three commits: `0ab43fe` signal primitives, `efd73d5` synthetic CSI simulator, `58c783d` visual lab notebooks. Parent verification: `uv run pytest -q` (`37 passed`) and synthetic example run with seed 42.
 - 2026-05-31: Completed Milestone 4 in two worker commits: `600cd74` presence/motion classifiers and `589a1eb` motion visual notebook/docs. Parent verification: `uv run pytest -q` (`41 passed`).
+- 2026-05-31: Completed Milestone 5 in two worker commits: `cd5f90a` vital sign estimators and `6750d38` vital signs visual notebook/docs. Parent verification: `uv run pytest -q` (`52 passed`).
 
 ## Recent Runs
 
