@@ -1,31 +1,59 @@
-"""Small synthetic CSI example for the first visual lab."""
+"""Compare deterministic synthetic CSI scenarios from the hardware simulator."""
 
 from __future__ import annotations
 
+import argparse
+
 import numpy as np
 
-from ruview.core import CsiFrame, CsiMetadata, FrequencyBand
+from ruview.core import CsiFrame
+from ruview.hardware import SyntheticCsiConfig, generate_synthetic_sequence
 
 
-def synthetic_frame(scale: float, phase_offset: float) -> CsiFrame:
-    metadata = CsiMetadata("sim-node-1", FrequencyBand.BAND_5_GHZ, channel=36)
-    subcarriers = np.arange(56, dtype=np.float64)
-    streams = []
-    for stream in range(3):
-        amplitude = scale + 0.08 * np.sin(subcarriers / 6.0 + stream)
-        phase = phase_offset + 0.15 * np.cos(subcarriers / 8.0 + stream)
-        streams.append(amplitude * np.exp(1j * phase))
-    return CsiFrame(metadata, np.vstack(streams))
+def summarize(label: str, frames: list[CsiFrame]) -> tuple[str, float, float, float, str]:
+    window = np.stack([frame.data for frame in frames], axis=0)
+    amplitude = np.abs(window)
+    mean_amplitude = float(np.mean(amplitude))
+    amplitude_std = float(np.std(amplitude))
+    temporal_motion = float(np.mean(np.var(amplitude, axis=0)))
+    witness = frames[0].witness_hash().hex()
+    return label, mean_amplitude, amplitude_std, temporal_motion, witness[:16]
 
 
 def main() -> None:
-    empty = synthetic_frame(scale=1.0, phase_offset=0.0)
-    present = synthetic_frame(scale=1.35, phase_offset=0.3)
-    print(f"empty mean amplitude:   {empty.mean_amplitude():.3f}")
-    print(f"present mean amplitude: {present.mean_amplitude():.3f}")
-    print(f"empty witness:          {empty.witness_hash().hex()}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--frames", type=int, default=128)
+    parser.add_argument("--streams", type=int, default=3)
+    parser.add_argument("--subcarriers", type=int, default=56)
+    args = parser.parse_args()
+
+    config = SyntheticCsiConfig(
+        seed=args.seed,
+        frames=args.frames,
+        streams=args.streams,
+        subcarriers=args.subcarriers,
+    )
+
+    rows = [
+        summarize("empty_room", generate_synthetic_sequence("empty_room", config)),
+        summarize("person_present", generate_synthetic_sequence("person_present", config)),
+        summarize("stillness", generate_synthetic_sequence("stillness", config)),
+        summarize("walking", generate_synthetic_sequence("walking", config)),
+    ]
+
+    print(
+        f"synthetic CSI: seed={config.seed} frames={config.frames} "
+        f"shape=({config.streams}, {config.subcarriers}) "
+        f"sample_rate={config.sample_rate_hz:.1f} Hz"
+    )
+    print("scenario          mean_amp  amp_std  temporal_var  first_witness")
+    for label, mean_amplitude, amplitude_std, temporal_motion, witness in rows:
+        print(
+            f"{label:<16}  {mean_amplitude:8.3f}  {amplitude_std:7.3f}  "
+            f"{temporal_motion:12.5f}  {witness}"
+        )
 
 
 if __name__ == "__main__":
     main()
-
