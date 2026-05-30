@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: scaffolded
+Status: milestone-2-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 0 scaffold is present, Milestone 1 has an initial tested core-contract port, and the development environment is now managed by `uv` with `uv.lock`.
-Current blocker: ESP32 protocol parser work has not started; Milestone 2 source mappings and binary packet fixtures still need to be selected.
-Next action: Start Milestone 2 with host-side ESP32 packet formats (`0xC511_0001`, `0xC511_0002`, `0xC511_0004`, `0xC511_A110`) and add parser parity tests.
+Latest useful result: Milestone 2 is implemented: ESP32 packet parsers, UDP/replay helpers, packet-format docs, and notebook JSON checks are committed. `uv run pytest -q` passes (`24 passed`).
+Current blocker: Milestone 3 signal-processing modules and visual lab notebooks have not started.
+Next action: Start Milestone 3 with signal primitives (amplitude/phase conversion, phase unwrap, Hampel filtering, feature extraction, subcarrier variance, synthetic CSI generator) and update notebooks `00`, `01`, and `05`.
 
 ## Active Threads
 
@@ -26,6 +26,7 @@ Next action: Start Milestone 2 with host-side ESP32 packet formats (`0xC511_0001
 - 2026-05-31: Replaced the pip-created `.venv` with a `uv`-managed environment via `uv sync --extra dev`; verified with `uv run pytest -q` (`9 passed`).
 - 2026-05-31: Expanded `README.md` with project goals, layout, `uv` quick check, and explicit acknowledgement of upstream `ruvnet/RuView` and its MIT license notice.
 - 2026-05-31: User initialized Git; expanded `.gitignore` for Python, `uv`, notebook, editor, and local recording artifacts; verified with `uv run pytest -q` before first commit.
+- 2026-05-31: Completed Milestone 2 in three commits: `dfb9e92` UDP receiver/replay helpers, `8b8e803` ESP32 packet parsers, `d123164` ESP32 packet docs/notebook checks. Parent verification: `uv run pytest -q` (`24 passed`) and 11 notebooks validated as JSON.
 
 ## Recent Runs
 
