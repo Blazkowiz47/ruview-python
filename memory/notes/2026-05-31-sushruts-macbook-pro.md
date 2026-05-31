@@ -63,6 +63,12 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `ce289e9` adds `docs/porting/ruvector.md`, `notebooks/11_ruvector_signal_geometry.ipynb`, notebook JSON coverage, and a worker memory note.
   - `886376a` adds compressed breathing and heartbeat histories, tests, and a worker memory note.
   - Parent integration exports Milestone 9 public APIs through `ruview.ruvector` and adds a public-export smoke test.
+- Completed Milestone 10 in worker commits and a parent export integration:
+  - `9a4e4bb` adds optional PyTorch RF encoder, projection heads, DensePose-style head, CSI-to-pose transformer, NumPy contrastive helpers, tests, and a worker memory note.
+  - `72b7ad0` updates notebooks `08`-`10`, adds `docs/porting/neural-training.md`, notebook JSON coverage, and a worker memory note.
+  - `34ceb63` adds NumPy tensor helpers, training config, synthetic/replay datasets, dataloader, tests, and a worker memory note.
+  - `3d0e5ab` adds losses, metrics, checkpoint manifests, model export manifests, tiny trainer, tests, and a worker memory note.
+  - Parent integration exports public APIs through `ruview.nn` and `ruview.training` and adds a public-export smoke test.
 
 ## Experiments / Runs
 
@@ -118,7 +124,15 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: full unit/parity suite and synthetic RuVector signal/geometry notebook fixture
 - Output path: parent Milestone 9 verification
 - Result: full tests pass (`124 passed`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 5 code cells.
-- Next action: Start Milestone 10 neural and training research.
+- Command/config: `uv run pytest -q tests/unit/test_neural_training_exports.py tests/unit/test_nn_models.py tests/unit/test_training_dataset.py tests/unit/test_training_utils.py`
+- Dataset: deterministic synthetic CSI, pose labels, heatmaps, metrics, checkpoint/export, and optional torch model-shape fixtures
+- Output path: Milestone 10 focused verification
+- Result: focused M10 tests pass (`15 passed`, `5 skipped` for optional torch).
+- Command/config: `uv run pytest -q`; JSON checks for notebooks `08`-`10`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: full unit/parity suite and synthetic CSI-to-pose, dataset replay, and embedding notebook fixtures
+- Output path: parent Milestone 10 verification
+- Result: full tests pass (`139 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebooks JSON valid; notebook smoke executed 9 code cells with only noninteractive matplotlib warnings.
+- Next action: Start Milestone 11 MAT research pipeline.
 
 ## Analysis Results
 
@@ -132,6 +146,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 7 intentionally ports the local research server surface, not the full Rust Axum production server. Host validation, auth, MQTT, Matter, edge registry, and static UI serving remain out of scope unless a later milestone needs them.
 - Milestone 8 ports the advanced RuvSense surface as deterministic NumPy research primitives rather than exact Rust solver internals: CIR uses oversampled IFFT/top-k taps, fusion uses explicit quality/coherence/distance weights, and temporal/adversarial detectors use compact thresholded models.
 - Milestone 9 ports RuVector behavior rather than crate internals: min-cut, attention, sparse solver, and temporal tensor concepts are represented as deterministic NumPy research helpers with tests and notebook coverage.
+- Milestone 10 ports neural/training behavior as a base NumPy research API plus optional PyTorch modules; base tests skip torch-dependent model checks when the `nn` extra is not installed.
 
 ## Learnings
 
@@ -144,6 +159,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Server tests should use simulated/replay sources and FastAPI TestClient; UDP construction/timeout is tested without requiring live ESP32 hardware.
 - For notebook smoke tests that execute plotting cells, set `MPLBACKEND=Agg` and close figures after each cell so automated checks stay non-interactive.
 - Keep `ruview.ruvector` as the stable public namespace for behavior-level RuVector equivalents; downstream training modules can use these helpers without depending on external Rust/RuVector crates.
+- Keep `ruview.nn` and `ruview.training` importable without torch so dataset/loss/metric/checkpoint/export research can run in the default `uv sync --extra dev` environment.
 
 ## Decisions
 
@@ -151,8 +167,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 10; neural and training research helpers need to be ported.
+- No current blocker for Milestone 11; MAT research helpers need to be ported.
 
 ## Next
 
-- Start Milestone 10 by mapping `wifi-densepose-nn` and `wifi-densepose-train` behavior into PyTorch/NumPy research modules, dataset loaders, checkpoint/export helpers, and notebooks `08`-`10`.
+- Start Milestone 11 by mapping `wifi-densepose-mat` behavior into Python disaster event, scan-zone, survivor/vitals, localization, tracking, triage, and local alert primitives.

@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-9-complete
+Status: milestone-10-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 9 is implemented: RuVector-style subcarrier partitioning, attention-gated spectrograms, BVP aggregation, Fresnel geometry, TDoA triangulation, GDI/CRB helpers, compressed breathing/heartbeat histories, public `ruview.ruvector` exports, tests, docs, and `11_ruvector_signal_geometry.ipynb`. Parent verification: `uv run pytest -q` (`124 passed`, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` code-cell smoke (`5` cells).
-Current blocker: Milestone 10 neural and training research has not started.
-Next action: Start Milestone 10 with PyTorch tensor/dataset pipeline, RF encoder, DensePose-style head, CSI-to-pose transformer, contrastive/projection helpers, checkpoints/export, and notebooks `08`-`10`.
+Latest useful result: Milestone 10 is implemented: NumPy tensor/config/dataset pipeline, deterministic synthetic/replay datasets, optional PyTorch RF encoder/DensePose/projection/CSI-to-pose transformer modules, contrastive losses, training losses/metrics, checkpoint/export manifests, tiny trainer, public `ruview.nn`/`ruview.training` exports, docs, and notebooks `08`-`10`. Parent verification: `uv run pytest -q` (`139 passed`, `5 skipped` for optional torch, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
+Current blocker: Milestone 11 MAT research pipeline has not started.
+Next action: Start Milestone 11 with disaster event models, scan zones, survivor/vital detection, localization/triangulation/tracking, triage scoring, and local-only alert objects.
 
 ## Active Threads
 
@@ -34,6 +34,7 @@ Next action: Start Milestone 10 with PyTorch tensor/dataset pipeline, RF encoder
 - 2026-05-31: Completed Milestone 7 in three commits: `97c2f5d` sensing examples/docs, `0fb072b` server schemas/sources, and `59841e1` FastAPI app integration. Parent verification: `uv run pytest -q` (`70 passed`) plus replay/server help smoke checks.
 - 2026-05-31: Completed Milestone 8 in six commits: `69bfbb1` multiband/multistatic fusion, `adaeaee` CIR/coherence, `eae6b19` multistatic notebook/docs, `785d47f` field/pose/tomography, `101c15e` temporal RuvSense primitives, and parent public-export integration. Parent verification: `uv run pytest -q` (`97 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 - 2026-05-31: Completed Milestone 9 in five commits: `a3041f9` RuVector geometry solvers, `42ff578` RuVector signal primitives, `ce289e9` docs/notebook, `886376a` compressed histories, and parent public-export integration. Parent verification: `uv run pytest -q` (`124 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
+- 2026-05-31: Completed Milestone 10 in five commits: `9a4e4bb` neural model modules, `72b7ad0` neural notebooks/docs, `34ceb63` tensor/dataset pipeline, `3d0e5ab` training utilities/export helpers, and parent public-export integration. Parent verification: `uv run pytest -q` (`139 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for `08`-`10`.
 
 ## Recent Runs
 
