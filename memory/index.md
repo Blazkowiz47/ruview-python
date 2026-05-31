@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-7-complete
+Status: milestone-8-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 7 is implemented: sensing update schemas, simulated/replay/UDP sources, latest-state buffer, FastAPI app, `/ws/sensing`, `/api/v1/sensing/latest`, `/api/v1/vital-signs`, replay/live examples, and docs are committed. Parent verification: `uv run pytest -q` (`70 passed`) plus replay and server help smoke checks.
-Current blocker: Milestone 8 advanced RuvSense signal modules have not started.
-Next action: Start Milestone 8 with CIR, coherence, coherence gates, multiband fusion, phase alignment, multistatic fusion, pose tracking, field model, tomography, gesture, intention, cross-room, and adversarial primitives.
+Latest useful result: Milestone 8 is implemented: CIR/sparse taps, coherence scoring/gates, multiband and multistatic fusion, LO phase alignment, field modeling, 17-keypoint tracking, tomography, gesture/intention/cross-room/longitudinal/adversarial primitives, public RuvSense exports, tests, docs, and `07_multistatic_node_comparison.ipynb`. Parent verification: `uv run pytest -q` (`97 passed`, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` code-cell smoke (`6` cells).
+Current blocker: Milestone 9 RuVector equivalents have not started.
+Next action: Start Milestone 9 with subcarrier partitioning, attention-gated spectrograms, BVP aggregation, Fresnel geometry, TDoA triangulation, and compressed vital-history buffers.
 
 ## Active Threads
 
@@ -32,6 +32,7 @@ Next action: Start Milestone 8 with CIR, coherence, coherence gates, multiband f
 - 2026-05-31: Completed Milestone 5 in two worker commits: `cd5f90a` vital sign estimators and `6750d38` vital signs visual notebook/docs. Parent verification: `uv run pytest -q` (`52 passed`).
 - 2026-05-31: Completed Milestone 6 in two worker commits: `1b34432` calibration drift notebook/docs and `6f72a73` calibration baseline primitives. Parent verification: `uv run pytest -q` (`59 passed`) and notebook smoke executed 7 code cells.
 - 2026-05-31: Completed Milestone 7 in three commits: `97c2f5d` sensing examples/docs, `0fb072b` server schemas/sources, and `59841e1` FastAPI app integration. Parent verification: `uv run pytest -q` (`70 passed`) plus replay/server help smoke checks.
+- 2026-05-31: Completed Milestone 8 in six commits: `69bfbb1` multiband/multistatic fusion, `adaeaee` CIR/coherence, `eae6b19` multistatic notebook/docs, `785d47f` field/pose/tomography, `101c15e` temporal RuvSense primitives, and parent public-export integration. Parent verification: `uv run pytest -q` (`97 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 
 ## Recent Runs
 

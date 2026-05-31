@@ -50,6 +50,13 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `97c2f5d` replaces the replay example, adds sensing-server porting docs, and records an example worker note.
   - `0fb072b` adds sensing update schemas, simulated/replay/UDP sources, latest-state buffer, exports, and source tests.
   - `59841e1` adds the FastAPI app factory, REST/latest/vitals endpoints, WebSocket stream, uvicorn research extra, app tests, and run-path docs.
+- Completed Milestone 8 in worker commits and a parent export integration:
+  - `69bfbb1` adds multiband CSI fusion, LO phase alignment, multistatic attention fusion, tests, and a worker memory note.
+  - `adaeaee` adds CIR sparse-tap estimation, coherence scoring, coherence gate decisions, tests, and a worker memory note.
+  - `eae6b19` updates `notebooks/07_multistatic_node_comparison.ipynb`, adds `docs/porting/ruvsense-advanced.md`, notebook JSON coverage, and a worker memory note.
+  - `785d47f` adds field model, pose tracker, tomography primitives, tests, and a worker memory note.
+  - `101c15e` adds gesture, intention, cross-room, longitudinal, adversarial primitives, tests, and a worker memory note.
+  - Parent integration exports Milestone 8 public APIs through `ruview.ruvsense` and adds a public-export smoke test.
 
 ## Experiments / Runs
 
@@ -89,7 +96,15 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: deterministic synthetic CSI sources and a hand-written JSONL replay fixture
 - Output path: Milestone 7 server schemas/sources/app/examples verification
 - Result: tests pass (`70 passed`); app help prints cleanly; replay fixture printed two normalized updates.
-- Next action: Start Milestone 8 advanced RuvSense signal modules.
+- Command/config: `uv run pytest -q tests/unit/test_ruvsense_exports.py tests/unit/test_ruvsense_cir_coherence.py tests/unit/test_ruvsense_fusion.py tests/unit/test_ruvsense_field_pose.py tests/unit/test_ruvsense_temporal.py`
+- Dataset: deterministic synthetic CIR, coherence, fusion, field, pose, tomography, gesture, drift, and adversarial fixtures
+- Output path: Milestone 8 focused verification
+- Result: focused RuvSense tests pass (`27 passed`).
+- Command/config: `uv run pytest -q`; `uv run python -m json.tool notebooks/07_multistatic_node_comparison.ipynb`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: full unit/parity suite and synthetic multistatic notebook fixture
+- Output path: parent Milestone 8 verification
+- Result: full tests pass (`97 passed`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 6 code cells with only noninteractive matplotlib warnings.
+- Next action: Start Milestone 9 RuVector equivalents.
 
 ## Analysis Results
 
@@ -101,6 +116,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 5 intentionally uses compact NumPy FFT/PSD peak scoring rather than line-by-line streaming Rust filters; this keeps the core install light while preserving the ADR-021 breathing and heart-rate bands.
 - Milestone 6 intentionally uses Python JSON baseline persistence with magic/version metadata, not the Rust ADR-135 little-endian binary ABI. The statistical behavior is ported first; binary parity can be added later if cross-tool interchange is needed.
 - Milestone 7 intentionally ports the local research server surface, not the full Rust Axum production server. Host validation, auth, MQTT, Matter, edge registry, and static UI serving remain out of scope unless a later milestone needs them.
+- Milestone 8 ports the advanced RuvSense surface as deterministic NumPy research primitives rather than exact Rust solver internals: CIR uses oversampled IFFT/top-k taps, fusion uses explicit quality/coherence/distance weights, and temporal/adversarial detectors use compact thresholded models.
 
 ## Learnings
 
@@ -111,6 +127,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Synthetic vitals fixtures are enough for API smoke tests and visual notebooks, but confidence/status thresholds remain uncalibrated until real CSI captures are available.
 - Calibration deviation tests confirm empty-like vs person/drift-like synthetic windows, but drift trigger thresholds still need real-room validation.
 - Server tests should use simulated/replay sources and FastAPI TestClient; UDP construction/timeout is tested without requiring live ESP32 hardware.
+- For notebook smoke tests that execute plotting cells, set `MPLBACKEND=Agg` and close figures after each cell so automated checks stay non-interactive.
 
 ## Decisions
 
@@ -118,8 +135,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 8; advanced RuvSense signal modules need to be ported.
+- No current blocker for Milestone 9; RuVector-equivalent research helpers need to be ported.
 
 ## Next
 
-- Start Milestone 8 by mapping `v2/crates/wifi-densepose-signal/src/ruvsense` into Python advanced signal primitives with tests and notebook coverage.
+- Start Milestone 9 by mapping RuVector behavior into Python graph/sparse/attention/geometry/history primitives with tests and notebook or doc coverage.

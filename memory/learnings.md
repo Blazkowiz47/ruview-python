@@ -17,6 +17,8 @@ Durable findings from this project. Keep this compact and useful for future work
 - Milestone 5 vitals ports the Rust ADR-021 pipeline conceptually with NumPy FFT/PSD helpers instead of exact streaming Rust IIR/FIR/autocorrelation internals. Unit fixtures estimate 18 BPM breathing and 72 BPM heart rate, while notebook confidence remains a tuning signal rather than a calibrated clinical result.
 - Milestone 6 calibration preserves the ADR-135 statistical shape: Welford amplitude mean/variance, circular phase mean/dispersion, median amplitude z-score, median phase drift, and non-mutating amplitude baseline subtraction. The Python save/load path is JSON research format, not Rust binary ABI parity yet.
 - Milestone 7 should stay local-first: source schemas and replay/simulation tests are deterministic, FastAPI is exposed through an app factory, and hardware UDP remains optional so `uv run pytest -q` never depends on radio packets.
+- Milestone 8 advanced RuvSense APIs are intentionally research primitives: CIR uses active-subcarrier placement plus oversampled IFFT/top-k sparse taps rather than Rust's full ISTA solver, fusion uses deterministic NumPy weights, and temporal/adversarial modules use synthetic-test calibrated thresholds pending real CSI captures.
+- Notebook smoke checks that execute matplotlib cells should set `MPLBACKEND=Agg` and close figures after each cell; this keeps automated `uv run --extra research` notebook verification non-interactive.
 
 ## Likely But Needs Verification
 
@@ -24,6 +26,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Real ESP32 captures will also be needed to tune vitals confidence thresholds, especially the heart-rate path where synthetic visual fixtures can detect the right peak but still report low confidence.
 - Rust ADR-135 little-endian baseline serialization remains a future parity target if interchange with the Rust tools becomes important.
 - The Python server currently normalizes simple JSONL replay rows and compact sensing updates, not the full Rust recording/session management API.
+- Real multistatic node captures are needed to tune Milestone 8 quality gates, attention weights, and physically impossible signal thresholds beyond deterministic synthetic fixtures.
 
 ## Failed Approaches
 
@@ -33,3 +36,4 @@ Durable findings from this project. Keep this compact and useful for future work
 
 - Preserve wire formats and data contracts where they matter, but prefer clear NumPy/SciPy/PyTorch implementations over opaque wrappers.
 - Keep the default Python install small and place heavier research tools in optional extras so low-level parity tests remain quick to run.
+- Keep advanced RuvSense modules importable through `ruview.ruvsense` with explicit exports; a small export smoke test catches missing public symbols after parallel worker slices land.

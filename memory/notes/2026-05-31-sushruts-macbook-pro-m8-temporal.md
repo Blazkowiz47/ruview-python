@@ -33,9 +33,9 @@ tags: [phd, research, ruview, wifi-densepose, python, ruvsense, milestone-8]
 ## Runs
 
 - Command/config: `uv run pytest -q tests/unit/test_ruvsense_temporal.py`
-- Result: `5 passed in 0.18s`.
+- Result: `5 passed in 0.32s`.
 - Command/config: `uv run pytest -q`
-- Result: `92 passed, 1 warning in 0.88s`; warning is the existing FastAPI/Starlette TestClient deprecation.
+- Result: `96 passed, 1 warning in 1.08s`; warning is the existing FastAPI/Starlette TestClient deprecation.
 
 ## Analysis Results
 
