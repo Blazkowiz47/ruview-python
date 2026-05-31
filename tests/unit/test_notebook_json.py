@@ -18,6 +18,7 @@ VISUAL_LAB_NOTEBOOKS = {
     "09_dataset_replay_lab.ipynb",
     "10_model_embedding_visualization.ipynb",
     "11_ruvector_signal_geometry.ipynb",
+    "12_mat_research_pipeline.ipynb",
 }
 
 VISUAL_LAB_PHRASES = (
