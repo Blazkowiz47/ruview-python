@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-10-complete
+Status: milestone-11-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 10 is implemented: NumPy tensor/config/dataset pipeline, deterministic synthetic/replay datasets, optional PyTorch RF encoder/DensePose/projection/CSI-to-pose transformer modules, contrastive losses, training losses/metrics, checkpoint/export manifests, tiny trainer, public `ruview.nn`/`ruview.training` exports, docs, and notebooks `08`-`10`. Parent verification: `uv run pytest -q` (`139 passed`, `5 skipped` for optional torch, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
-Current blocker: Milestone 11 MAT research pipeline has not started.
-Next action: Start Milestone 11 with disaster event models, scan zones, survivor/vital detection, localization/triangulation/tracking, triage scoring, and local-only alert objects.
+Latest useful result: Milestone 11 is implemented: MAT disaster event/domain models, scan zones, survivor/vitals history, breathing/heartbeat/movement detection, ensemble detection pipeline, range localization/depth/fusion, Kalman survivor tracking, START-style triage, local-only alert lifecycle, public `ruview.mat` exports, docs, and notebook `12`. Parent verification: `uv run pytest -q` (`165 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
+Current blocker: No current blocker.
+Next action: Start Milestone 12 with WorldGraph provenance/trust/privacy/BFLD primitives and a visual graph research notebook.
 
 ## Active Threads
 
@@ -35,6 +35,7 @@ Next action: Start Milestone 11 with disaster event models, scan zones, survivor
 - 2026-05-31: Completed Milestone 8 in six commits: `69bfbb1` multiband/multistatic fusion, `adaeaee` CIR/coherence, `eae6b19` multistatic notebook/docs, `785d47f` field/pose/tomography, `101c15e` temporal RuvSense primitives, and parent public-export integration. Parent verification: `uv run pytest -q` (`97 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 - 2026-05-31: Completed Milestone 9 in five commits: `a3041f9` RuVector geometry solvers, `42ff578` RuVector signal primitives, `ce289e9` docs/notebook, `886376a` compressed histories, and parent public-export integration. Parent verification: `uv run pytest -q` (`124 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 - 2026-05-31: Completed Milestone 10 in five commits: `9a4e4bb` neural model modules, `72b7ad0` neural notebooks/docs, `34ceb63` tensor/dataset pipeline, `3d0e5ab` training utilities/export helpers, and parent public-export integration. Parent verification: `uv run pytest -q` (`139 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for `08`-`10`.
+- 2026-05-31: Completed Milestone 11 in five commits: `9e7c901` MAT docs/notebook, `2195498` triage/local alerts, `c929e4d` localization/tracking, `698e5fe` domain/detection, and parent public-export integration. Parent verification: `uv run pytest -q` (`165 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `12`.
 
 ## Recent Runs
 

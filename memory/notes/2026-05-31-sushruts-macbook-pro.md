@@ -69,6 +69,12 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `34ceb63` adds NumPy tensor helpers, training config, synthetic/replay datasets, dataloader, tests, and a worker memory note.
   - `3d0e5ab` adds losses, metrics, checkpoint manifests, model export manifests, tiny trainer, tests, and a worker memory note.
   - Parent integration exports public APIs through `ruview.nn` and `ruview.training` and adds a public-export smoke test.
+- Completed Milestone 11 in worker commits and a parent export integration:
+  - `9e7c901` adds `docs/porting/mat.md`, `notebooks/12_mat_research_pipeline.ipynb`, notebook JSON coverage, and a worker memory note.
+  - `2195498` adds START-style triage scoring, local-only alert payloads/dispatcher lifecycle, tests, and a worker memory note.
+  - `c929e4d` adds MAT range localization, depth/fusion helpers, Kalman survivor tracking, fingerprints, tests, and a worker memory note.
+  - `698e5fe` adds MAT disaster/domain/survivor/vital models, breathing/heartbeat/movement/ensemble detection, tests, and a worker memory note.
+  - Parent integration exports public APIs through `ruview.mat` with explicit domain/localization aliases and adds a public-export smoke test.
 
 ## Experiments / Runs
 
@@ -132,7 +138,15 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: full unit/parity suite and synthetic CSI-to-pose, dataset replay, and embedding notebook fixtures
 - Output path: parent Milestone 10 verification
 - Result: full tests pass (`139 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebooks JSON valid; notebook smoke executed 9 code cells with only noninteractive matplotlib warnings.
-- Next action: Start Milestone 11 MAT research pipeline.
+- Command/config: `uv run pytest -q tests/unit/test_mat_exports.py tests/unit/test_mat_domain_detection.py tests/unit/test_mat_localization_tracking.py tests/unit/test_mat_triage_alerts.py`
+- Dataset: deterministic MAT domain, survivor/vitals, localization/tracking, triage, and alert fixtures
+- Output path: Milestone 11 focused verification
+- Result: focused MAT tests pass (`26 passed`).
+- Command/config: `uv run pytest -q`; `uv run python -m json.tool notebooks/12_mat_research_pipeline.ipynb`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: full unit/parity suite and synthetic MAT rescue-zone notebook fixture
+- Output path: parent Milestone 11 verification
+- Result: full tests pass (`165 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 5 code cells with only noninteractive matplotlib warning.
+- Next action: Start Milestone 12 WorldGraph, trust, privacy, and BFLD research primitives.
 
 ## Analysis Results
 
@@ -147,6 +161,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 8 ports the advanced RuvSense surface as deterministic NumPy research primitives rather than exact Rust solver internals: CIR uses oversampled IFFT/top-k taps, fusion uses explicit quality/coherence/distance weights, and temporal/adversarial detectors use compact thresholded models.
 - Milestone 9 ports RuVector behavior rather than crate internals: min-cut, attention, sparse solver, and temporal tensor concepts are represented as deterministic NumPy research helpers with tests and notebook coverage.
 - Milestone 10 ports neural/training behavior as a base NumPy research API plus optional PyTorch modules; base tests skip torch-dependent model checks when the `nn` extra is not installed.
+- Milestone 11 ports MAT behavior as local research primitives: disaster events, zones, survivors, vital detection, localization, tracking, triage, and alerts are deterministic Python APIs with no external emergency dispatch integration.
 
 ## Learnings
 
@@ -160,6 +175,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - For notebook smoke tests that execute plotting cells, set `MPLBACKEND=Agg` and close figures after each cell so automated checks stay non-interactive.
 - Keep `ruview.ruvector` as the stable public namespace for behavior-level RuVector equivalents; downstream training modules can use these helpers without depending on external Rust/RuVector crates.
 - Keep `ruview.nn` and `ruview.training` importable without torch so dataset/loss/metric/checkpoint/export research can run in the default `uv sync --extra dev` environment.
+- Use explicit aliases for colliding MAT concepts (`DomainLocationUncertainty`, `LocalizationLocationUncertainty`, etc.) so the public namespace remains predictable.
 
 ## Decisions
 
@@ -167,8 +183,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 11; MAT research helpers need to be ported.
+- No current blocker.
 
 ## Next
 
-- Start Milestone 11 by mapping `wifi-densepose-mat` behavior into Python disaster event, scan-zone, survivor/vitals, localization, tracking, triage, and local alert primitives.
+- Start Milestone 12 by mapping WorldGraph provenance/trust/privacy/BFLD behavior into Python graph, trust, privacy-mode, and redaction primitives.

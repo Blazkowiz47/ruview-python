@@ -21,6 +21,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Notebook smoke checks that execute matplotlib cells should set `MPLBACKEND=Agg` and close figures after each cell; this keeps automated `uv run --extra research` notebook verification non-interactive.
 - Milestone 9 RuVector equivalents port behavior, not dependency internals: graph/min-cut becomes deterministic sensitivity-gap partitioning, solver calls become tiny NumPy least-squares/refinement routines, attention becomes explicit softmax weighting, and temporal tensor compression becomes quantized ring buffers.
 - Milestone 10 keeps the default neural/training stack NumPy-only while exposing optional PyTorch modules behind the `nn` extra; tests use `pytest.importorskip("torch")` so the base `uv run pytest -q` path stays lightweight.
+- Milestone 11 MAT stays research/local-only: disaster/survivor/vitals/domain objects and range/tracking/triage/alert behavior are ported as deterministic Python primitives, and alert dispatch is intentionally an in-memory lifecycle rather than SMS/MQTT/pager integration.
 
 ## Likely But Needs Verification
 
@@ -31,6 +32,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Real multistatic node captures are needed to tune Milestone 8 quality gates, attention weights, and physically impossible signal thresholds beyond deterministic synthetic fixtures.
 - Real RuVector-style multiband captures are needed to validate M9 subcarrier partitions, spectrogram gates, BVP attention weights, Fresnel path splits, and TDoA residual thresholds.
 - Milestone 10 synthetic datasets and notebooks verify shapes and APIs, not training quality; real CSI/pose datasets are required before any model-performance claims.
+- MAT thresholds and localization confidence are synthetic-fixture calibrated only; real rubble/debris CSI or UWB-style captures are needed before using M11 outputs as operational rescue evidence.
 
 ## Failed Approaches
 
@@ -43,3 +45,4 @@ Durable findings from this project. Keep this compact and useful for future work
 - Keep advanced RuvSense modules importable through `ruview.ruvsense` with explicit exports; a small export smoke test catches missing public symbols after parallel worker slices land.
 - Keep behavior-level ports in their own package namespace (`ruview.ruvector`) so later neural/training code can depend on compact signal and geometry helpers without pulling in external RuVector internals.
 - Export optional neural components through `ruview.nn` with placeholders that explain the `uv sync --extra nn` path, while keeping NumPy-safe tensor, contrastive, dataset, loss, metric, checkpoint, and export helpers usable in the base environment.
+- For namespaces with duplicate domain/localization concepts, export explicit aliases such as `DomainLocationUncertainty` and `LocalizationLocationUncertainty` to avoid accidental public-symbol overwrites after parallel worker slices land.
