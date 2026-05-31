@@ -19,6 +19,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Milestone 7 should stay local-first: source schemas and replay/simulation tests are deterministic, FastAPI is exposed through an app factory, and hardware UDP remains optional so `uv run pytest -q` never depends on radio packets.
 - Milestone 8 advanced RuvSense APIs are intentionally research primitives: CIR uses active-subcarrier placement plus oversampled IFFT/top-k sparse taps rather than Rust's full ISTA solver, fusion uses deterministic NumPy weights, and temporal/adversarial modules use synthetic-test calibrated thresholds pending real CSI captures.
 - Notebook smoke checks that execute matplotlib cells should set `MPLBACKEND=Agg` and close figures after each cell; this keeps automated `uv run --extra research` notebook verification non-interactive.
+- Milestone 9 RuVector equivalents port behavior, not dependency internals: graph/min-cut becomes deterministic sensitivity-gap partitioning, solver calls become tiny NumPy least-squares/refinement routines, attention becomes explicit softmax weighting, and temporal tensor compression becomes quantized ring buffers.
 
 ## Likely But Needs Verification
 
@@ -27,6 +28,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Rust ADR-135 little-endian baseline serialization remains a future parity target if interchange with the Rust tools becomes important.
 - The Python server currently normalizes simple JSONL replay rows and compact sensing updates, not the full Rust recording/session management API.
 - Real multistatic node captures are needed to tune Milestone 8 quality gates, attention weights, and physically impossible signal thresholds beyond deterministic synthetic fixtures.
+- Real RuVector-style multiband captures are needed to validate M9 subcarrier partitions, spectrogram gates, BVP attention weights, Fresnel path splits, and TDoA residual thresholds.
 
 ## Failed Approaches
 
@@ -37,3 +39,4 @@ Durable findings from this project. Keep this compact and useful for future work
 - Preserve wire formats and data contracts where they matter, but prefer clear NumPy/SciPy/PyTorch implementations over opaque wrappers.
 - Keep the default Python install small and place heavier research tools in optional extras so low-level parity tests remain quick to run.
 - Keep advanced RuvSense modules importable through `ruview.ruvsense` with explicit exports; a small export smoke test catches missing public symbols after parallel worker slices land.
+- Keep behavior-level ports in their own package namespace (`ruview.ruvector`) so later neural/training code can depend on compact signal and geometry helpers without pulling in external RuVector internals.
