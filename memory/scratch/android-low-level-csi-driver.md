@@ -1,15 +1,14 @@
-# Android Low-Level CSI Driver Research Plan
+# Android Low-Level CSI Driver Scratch
 
-## Purpose
+Date: 2026-05-31
+Node: sushruts-macbook-pro
+Status: open
 
-Explore whether an Android device, starting with the Pixel 9 Pro if approved,
-can be turned into a WiFi Channel State Information (CSI) receiver for
-camera-free spatial sensing experiments.
+## Question
 
-This is a research feasibility plan, not an app plan. A normal Android app
-cannot access CSI. The useful work is below Java/Kotlin: chipset
-identification, kernel/driver inspection, firmware capability discovery, and a
-safe data-export path if CSI can be exposed.
+Can an Android device, starting with the Pixel 9 Pro if approved, be turned into
+a WiFi Channel State Information (CSI) receiver for camera-free spatial sensing
+experiments?
 
 ## Working Hypothesis
 
@@ -221,3 +220,8 @@ collection:
 - laptop serial collector
 
 This keeps the sensing project moving even if Android CSI is not feasible.
+
+## Next Action
+
+- Wait for supervisor approval before any Pixel root/modification.
+- Prepare ESP32 CSI collection as the safe baseline.
