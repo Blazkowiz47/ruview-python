@@ -58,6 +58,10 @@ Next action: Optional post-port audit against real RuView captures/reference API
 
 - See `commands/index.md`.
 
+## Scratch
+
+- See `scratch/index.md` for unresolved project-local captures and in-flight notes.
+
 ## Links
 
 - Main workstream: `/Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md`

@@ -14,4 +14,6 @@ Command specs do not replace project-specific instructions. If there is a confli
 | `/decision` | `decision.md` | Record a decision and rationale. |
 | `/learned` | `learned.md` | Record a durable finding or reusable lesson. |
 | `/status` | `status.md` | Update the project context card. |
+| `/scratch` | `scratch.md` | Capture an uncertain or in-flight project-local note. |
+| `/organise-scratch` | `organise-scratch.md` | Route project-local scratch notes into the right memory files. |
 | `/check-initialisation` | `check-initialisation.md` | Verify and align the project memory structure. |

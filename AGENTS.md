@@ -16,6 +16,7 @@ This project participates in Sushrut's knowledge-base memory system. These direc
 - Track experiments and long-running jobs in `memory/runs.md`.
 - Track durable findings in `memory/learnings.md`.
 - Track decisions and their rationale in `memory/decisions.md`.
+- Use `memory/scratch/` for uncertain project-only captures and in-flight notes that are not ready for `notes/`, `runs.md`, `learnings.md`, `decisions.md`, or `index.md`.
 - Use `memory/commands/` for portable project-memory slash command specs when present.
 
 ### Project Memory Commands
@@ -28,6 +29,8 @@ If the user starts a prompt with a project memory command, follow the matching s
 - `/decision` - record a project decision and rationale.
 - `/learned` - record a durable finding or reusable lesson.
 - `/status` - update the project context card.
+- `/scratch` - capture an uncertain or in-flight project-local note.
+- `/organise-scratch` - route project-local scratch notes into the right memory files.
 - `/check-initialisation` - verify and align the project memory structure.
 
 These command specs are shortcuts. They do not override project-specific instructions or this `AGENTS.md`.
@@ -60,5 +63,5 @@ These command specs are shortcuts. They do not override project-specific instruc
 - Do not paste giant logs, full outputs, large tables, or raw dumps.
 - Summarize the durable lesson and link to paths where evidence lives.
 - Prefer clear next actions over vague observations.
-- If unsure whether something matters, add it briefly to today's note and mark it as uncertain.
+- If unsure whether something matters, add it briefly to today's note when it is small; use `memory/scratch/` when it needs a separate in-flight note.
 <!-- END SUSHRUT MEMORY DIRECTIVES -->
