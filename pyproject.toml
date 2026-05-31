@@ -31,6 +31,7 @@ research = [
   "scikit-learn>=1.4",
   "scipy>=1.13",
   "seaborn>=0.13",
+  "uvicorn>=0.30",
   "websockets>=13.0",
 ]
 nn = [
@@ -43,4 +44,3 @@ packages = ["src/ruview"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-

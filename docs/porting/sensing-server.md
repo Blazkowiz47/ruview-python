@@ -29,6 +29,13 @@ The intended local routes mirror the Milestone 7 plan:
 - `GET /api/v1/vital-signs`
 - `WS /ws/sensing`
 
+Run the local research server:
+
+```bash
+uv sync --extra research
+uv run --extra research python -m ruview.server.app --source simulated --host 127.0.0.1 --port 8080
+```
+
 The Python source layer should support:
 
 - `simulated` for deterministic synthetic CSI from `ruview.hardware.simulator`;

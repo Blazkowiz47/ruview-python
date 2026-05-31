@@ -20,6 +20,17 @@ from ruview.server.sources import (
     sensing_update_from_window,
 )
 
+_APP_EXPORTS = {"ServerConfig", "create_app", "empty_update", "poll_once", "source_from_config"}
+
+
+def __getattr__(name: str):
+    if name in _APP_EXPORTS:
+        from ruview.server import app as app_module
+
+        return getattr(app_module, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
 __all__ = [
     "SENSING_UPDATE_TYPE",
     "ClassificationSummary",
@@ -33,6 +44,11 @@ __all__ = [
     "SimulatedSensingSource",
     "UdpSensingSource",
     "VitalSignsSummary",
+    "ServerConfig",
+    "create_app",
+    "empty_update",
+    "poll_once",
+    "source_from_config",
     "sensing_update_from_record",
     "sensing_update_from_window",
     "sensing_update_to_dict",
