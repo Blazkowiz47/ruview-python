@@ -46,6 +46,10 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Completed Milestone 6 via two clean worker commits:
   - `1b34432` updates `notebooks/06_calibration_baseline_drift.ipynb`, adds `docs/porting/calibration-baseline-drift.md`, notebook JSON coverage, and a worker memory note.
   - `6f72a73` adds `src/ruview/ruvsense/calibration.py`, RuvSense exports, calibration tests, and a worker memory note.
+- Completed Milestone 7 in three commits:
+  - `97c2f5d` replaces the replay example, adds sensing-server porting docs, and records an example worker note.
+  - `0fb072b` adds sensing update schemas, simulated/replay/UDP sources, latest-state buffer, exports, and source tests.
+  - `59841e1` adds the FastAPI app factory, REST/latest/vitals endpoints, WebSocket stream, uvicorn research extra, app tests, and run-path docs.
 
 ## Experiments / Runs
 
@@ -81,7 +85,11 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: deterministic empty-room, drift, and localized person/event calibration fixtures
 - Output path: Milestone 6 calibration API and notebook verification
 - Result: tests pass (`59 passed`); calibration notebook smoke executed 7 code cells with only noninteractive matplotlib warnings.
-- Next action: Start Milestone 7 Python research sensing server with simulated, UDP, and replay sources.
+- Command/config: `uv run pytest -q`; `uv run --extra research python -m ruview.server.app --help`; `uv run python examples/replay_recording.py <fixture> --limit 2`
+- Dataset: deterministic synthetic CSI sources and a hand-written JSONL replay fixture
+- Output path: Milestone 7 server schemas/sources/app/examples verification
+- Result: tests pass (`70 passed`); app help prints cleanly; replay fixture printed two normalized updates.
+- Next action: Start Milestone 8 advanced RuvSense signal modules.
 
 ## Analysis Results
 
@@ -92,6 +100,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 4 intentionally ports the Rust motion detector conceptually: weighted variance, temporal delta, phase variance, and subcarrier variance components with baseline-relative thresholds, plus debounce for human-readable empty/still/moving states.
 - Milestone 5 intentionally uses compact NumPy FFT/PSD peak scoring rather than line-by-line streaming Rust filters; this keeps the core install light while preserving the ADR-021 breathing and heart-rate bands.
 - Milestone 6 intentionally uses Python JSON baseline persistence with magic/version metadata, not the Rust ADR-135 little-endian binary ABI. The statistical behavior is ported first; binary parity can be added later if cross-tool interchange is needed.
+- Milestone 7 intentionally ports the local research server surface, not the full Rust Axum production server. Host validation, auth, MQTT, Matter, edge registry, and static UI serving remain out of scope unless a later milestone needs them.
 
 ## Learnings
 
@@ -101,6 +110,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Synthetic presence/motion thresholds are useful for visual lab progress, but real ESP32 captures are still needed before treating scores as calibrated.
 - Synthetic vitals fixtures are enough for API smoke tests and visual notebooks, but confidence/status thresholds remain uncalibrated until real CSI captures are available.
 - Calibration deviation tests confirm empty-like vs person/drift-like synthetic windows, but drift trigger thresholds still need real-room validation.
+- Server tests should use simulated/replay sources and FastAPI TestClient; UDP construction/timeout is tested without requiring live ESP32 hardware.
 
 ## Decisions
 
@@ -108,8 +118,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 7; the Python research sensing server and sources need to be built.
+- No current blocker for Milestone 8; advanced RuvSense signal modules need to be ported.
 
 ## Next
 
-- Start Milestone 7 by mapping `v2/crates/wifi-densepose-sensing-server` into a local FastAPI app with simulated, UDP, and replay sources, WebSocket sensing updates, REST latest/vital-sign endpoints, tests, docs, and examples.
+- Start Milestone 8 by mapping `v2/crates/wifi-densepose-signal/src/ruvsense` into Python advanced signal primitives with tests and notebook coverage.

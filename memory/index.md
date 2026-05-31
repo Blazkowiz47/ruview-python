@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-6-complete
+Status: milestone-7-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 6 is implemented: empty-room baseline recording, Welford amplitude stats, circular phase baselines, deviation/drift scoring, JSON baseline save/load, docs, and `06_calibration_baseline_drift.ipynb` are committed. Parent verification: `uv run pytest -q` (`59 passed`) plus notebook smoke (`7` code cells).
-Current blocker: Milestone 7 Python research sensing server has not started.
-Next action: Start Milestone 7 with FastAPI app, UDP/simulated/replay sources, WebSocket sensing updates, REST latest/vital-sign endpoints, local-only config, tests, and examples.
+Latest useful result: Milestone 7 is implemented: sensing update schemas, simulated/replay/UDP sources, latest-state buffer, FastAPI app, `/ws/sensing`, `/api/v1/sensing/latest`, `/api/v1/vital-signs`, replay/live examples, and docs are committed. Parent verification: `uv run pytest -q` (`70 passed`) plus replay and server help smoke checks.
+Current blocker: Milestone 8 advanced RuvSense signal modules have not started.
+Next action: Start Milestone 8 with CIR, coherence, coherence gates, multiband fusion, phase alignment, multistatic fusion, pose tracking, field model, tomography, gesture, intention, cross-room, and adversarial primitives.
 
 ## Active Threads
 
@@ -31,6 +31,7 @@ Next action: Start Milestone 7 with FastAPI app, UDP/simulated/replay sources, W
 - 2026-05-31: Completed Milestone 4 in two worker commits: `600cd74` presence/motion classifiers and `589a1eb` motion visual notebook/docs. Parent verification: `uv run pytest -q` (`41 passed`).
 - 2026-05-31: Completed Milestone 5 in two worker commits: `cd5f90a` vital sign estimators and `6750d38` vital signs visual notebook/docs. Parent verification: `uv run pytest -q` (`52 passed`).
 - 2026-05-31: Completed Milestone 6 in two worker commits: `1b34432` calibration drift notebook/docs and `6f72a73` calibration baseline primitives. Parent verification: `uv run pytest -q` (`59 passed`) and notebook smoke executed 7 code cells.
+- 2026-05-31: Completed Milestone 7 in three commits: `97c2f5d` sensing examples/docs, `0fb072b` server schemas/sources, and `59841e1` FastAPI app integration. Parent verification: `uv run pytest -q` (`70 passed`) plus replay/server help smoke checks.
 
 ## Recent Runs
 
