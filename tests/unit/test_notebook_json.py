@@ -19,6 +19,7 @@ VISUAL_LAB_NOTEBOOKS = {
     "10_model_embedding_visualization.ipynb",
     "11_ruvector_signal_geometry.ipynb",
     "12_mat_research_pipeline.ipynb",
+    "13_worldgraph_privacy_provenance.ipynb",
 }
 
 VISUAL_LAB_PHRASES = (
