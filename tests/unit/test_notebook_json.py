@@ -14,6 +14,7 @@ VISUAL_LAB_NOTEBOOKS = {
     "05_subcarrier_heatmaps.ipynb",
     "06_calibration_baseline_drift.ipynb",
     "07_multistatic_node_comparison.ipynb",
+    "11_ruvector_signal_geometry.ipynb",
 }
 
 VISUAL_LAB_PHRASES = (
