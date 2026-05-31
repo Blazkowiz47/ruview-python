@@ -11,6 +11,7 @@ VISUAL_LAB_NOTEBOOKS = {
     "01_empty_room_vs_person_present.ipynb",
     "02_motion_vs_stillness.ipynb",
     "03_breathing_and_heart_rate_bands.ipynb",
+    "04_phase_and_amplitude_visualization.ipynb",
     "05_subcarrier_heatmaps.ipynb",
     "06_calibration_baseline_drift.ipynb",
     "07_multistatic_node_comparison.ipynb",

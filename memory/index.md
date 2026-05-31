@@ -39,6 +39,7 @@ Next action: Optional post-port audit against real RuView captures/reference API
 - 2026-05-31: Completed Milestone 12 in four commits: `851cc02` docs/notebook, `05b5d9b` WorldGraph graph/provenance, `65922dd` BFLD privacy primitives, and parent public-export/trust-throughline integration. Parent verification: `uv run pytest -q` (`181 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `13`.
 - 2026-05-31: Completed Milestone 13 in worker commits: `3fc81b9` nvsim simulator, `35640e9` desktop/browser helpers, `de0b808` optional-track docs/notebook, `b5aeb1d` HOMECORE primitives, `a4bbd5e` swarm models, plus parent public-export integration for `ruview.hardware` and cross-package smoke coverage. Parent verification: focused M13 tests (`31 passed`), notebook `14` JSON/smoke, and `uv run pytest -q` (`212 passed`, `5 skipped`).
 - 2026-05-31: Cleaned documentation and memory notes to remove local `1Projects` absolute-path prefixes, leaving repo-name references such as `RuView/...` and `ruview-python/...`.
+- 2026-05-31: Filled notebook `04_phase_and_amplitude_visualization.ipynb` with a deterministic synthetic CSI phase/amplitude fixture and plots, added it to notebook scaffolding tests, and stripped saved notebook outputs so notebooks regenerate from code cells.
 
 ## Recent Runs
 

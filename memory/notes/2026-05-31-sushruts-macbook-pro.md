@@ -88,6 +88,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `a4bbd5e` adds swarm topology, formation, planning, sensing/fusion research primitives, tests, and worker memory note.
   - Parent integration exports desktop hardware helpers through `ruview.hardware` and adds `tests/unit/test_optional_exports.py` as a cross-package smoke test.
 - Cleaned Markdown documentation and memory notes to remove local `1Projects` absolute-path prefixes while preserving useful repo-relative references.
+- Filled `notebooks/04_phase_and_amplitude_visualization.ipynb` with a deterministic synthetic CSI phase/amplitude fixture, amplitude and phase plots, expected interpretation, and limitations. Added notebook `04` to the visual-lab scaffolding test.
+- Stripped saved execution counts and outputs from notebooks `00` through `14`; notebooks now carry runnable dummy/synthetic data in code cells without committed output blobs.
 
 ## Experiments / Runs
 
@@ -183,6 +185,10 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: docs, porting notes, project memory notes, README, and plan
 - Output path: documentation cleanup verification
 - Result: no remaining matches after replacing those prefixes with repo-name references.
+- Command/config: `uv run python -m json.tool notebooks/04_phase_and_amplitude_visualization.ipynb`; `MPLBACKEND=Agg uv run --extra research python <notebook 04 smoke>`; `uv run pytest -q tests/unit/test_notebook_json.py`
+- Dataset: deterministic synthetic phase/amplitude CSI fixture and all committed notebooks
+- Output path: notebook `04` and notebook hygiene verification
+- Result: notebook `04` JSON valid; smoke executed 2 code cells; notebook JSON/scaffolding tests pass (`2 passed`); every notebook has a `Fixture / simulated source:` line.
 - Next action: Optional post-port audit with real RuView captures/reference APIs and threshold tuning.
 
 ## Analysis Results
