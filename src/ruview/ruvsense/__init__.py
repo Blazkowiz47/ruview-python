@@ -1,2 +1,41 @@
 """Advanced RuvSense research modules."""
 
+from ruview.ruvsense.calibration import (
+    BASELINE_JSON_MAGIC,
+    BASELINE_JSON_VERSION,
+    BaselineCalibration,
+    CalibrationConfig,
+    CalibrationDeviationScore,
+    CalibrationError,
+    CalibrationRecorder,
+    DriftDecision,
+    InsufficientFramesError,
+    PhyTier,
+    SubcarrierBaselineStats,
+    SubcarrierMismatchError,
+    WelfordStats,
+    circular_distance,
+    load_baseline,
+    save_baseline,
+    subtract_baseline,
+)
+
+__all__ = [
+    "BASELINE_JSON_MAGIC",
+    "BASELINE_JSON_VERSION",
+    "BaselineCalibration",
+    "CalibrationConfig",
+    "CalibrationDeviationScore",
+    "CalibrationError",
+    "CalibrationRecorder",
+    "DriftDecision",
+    "InsufficientFramesError",
+    "PhyTier",
+    "SubcarrierBaselineStats",
+    "SubcarrierMismatchError",
+    "WelfordStats",
+    "circular_distance",
+    "load_baseline",
+    "save_baseline",
+    "subtract_baseline",
+]
