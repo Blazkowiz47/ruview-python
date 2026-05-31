@@ -2,15 +2,15 @@
 
 ## Context Card
 
-Status: milestone-11-complete
+Status: milestone-12-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
 Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
-Latest useful result: Milestone 11 is implemented: MAT disaster event/domain models, scan zones, survivor/vitals history, breathing/heartbeat/movement detection, ensemble detection pipeline, range localization/depth/fusion, Kalman survivor tracking, START-style triage, local-only alert lifecycle, public `ruview.mat` exports, docs, and notebook `12`. Parent verification: `uv run pytest -q` (`165 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
+Latest useful result: Milestone 12 is implemented: WorldGraph node/edge/provenance models, deterministic graph snapshots, privacy rollups, BFLD header/payload/CRC primitives, privacy modes and attestation chain, identity-risk gate, signature hashes, monotonic privacy demotion, trust-throughline witness helpers, public `ruview.worldgraph`/`ruview.privacy` exports, docs, and notebook `13`. Parent verification: `uv run pytest -q` (`181 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 Current blocker: No current blocker.
-Next action: Start Milestone 12 with WorldGraph provenance/trust/privacy/BFLD primitives and a visual graph research notebook.
+Next action: Start Milestone 13 optional later tracks with scoped HOMECORE, nvsim, swarm, browser visualization, and desktop hardware-tooling research subsets.
 
 ## Active Threads
 
@@ -36,6 +36,7 @@ Next action: Start Milestone 12 with WorldGraph provenance/trust/privacy/BFLD pr
 - 2026-05-31: Completed Milestone 9 in five commits: `a3041f9` RuVector geometry solvers, `42ff578` RuVector signal primitives, `ce289e9` docs/notebook, `886376a` compressed histories, and parent public-export integration. Parent verification: `uv run pytest -q` (`124 passed`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke.
 - 2026-05-31: Completed Milestone 10 in five commits: `9a4e4bb` neural model modules, `72b7ad0` neural notebooks/docs, `34ceb63` tensor/dataset pipeline, `3d0e5ab` training utilities/export helpers, and parent public-export integration. Parent verification: `uv run pytest -q` (`139 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for `08`-`10`.
 - 2026-05-31: Completed Milestone 11 in five commits: `9e7c901` MAT docs/notebook, `2195498` triage/local alerts, `c929e4d` localization/tracking, `698e5fe` domain/detection, and parent public-export integration. Parent verification: `uv run pytest -q` (`165 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `12`.
+- 2026-05-31: Completed Milestone 12 in four commits: `851cc02` docs/notebook, `05b5d9b` WorldGraph graph/provenance, `65922dd` BFLD privacy primitives, and parent public-export/trust-throughline integration. Parent verification: `uv run pytest -q` (`181 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `13`.
 
 ## Recent Runs
 

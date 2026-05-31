@@ -75,6 +75,11 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `c929e4d` adds MAT range localization, depth/fusion helpers, Kalman survivor tracking, fingerprints, tests, and a worker memory note.
   - `698e5fe` adds MAT disaster/domain/survivor/vital models, breathing/heartbeat/movement/ensemble detection, tests, and a worker memory note.
   - Parent integration exports public APIs through `ruview.mat` with explicit domain/localization aliases and adds a public-export smoke test.
+- Completed Milestone 12 in worker commits and a parent export/trust integration:
+  - `851cc02` adds `docs/porting/worldgraph-privacy.md`, `notebooks/13_worldgraph_privacy_provenance.ipynb`, notebook JSON coverage, and a worker memory note.
+  - `05b5d9b` adds WorldGraph dataclass nodes/edges, graph snapshot/query/provenance/rollup helpers, tests, and a worker memory note.
+  - `65922dd` adds BFLD header/payload/CRC primitives, privacy modes, attestation chain, identity-risk/signature helpers, privacy demotion, tests, and a worker memory note.
+  - Parent integration exports public APIs through `ruview.worldgraph` and `ruview.privacy`, adds trust-throughline witness helpers, and adds a public composition smoke test.
 
 ## Experiments / Runs
 
@@ -146,7 +151,15 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: full unit/parity suite and synthetic MAT rescue-zone notebook fixture
 - Output path: parent Milestone 11 verification
 - Result: full tests pass (`165 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 5 code cells with only noninteractive matplotlib warning.
-- Next action: Start Milestone 12 WorldGraph, trust, privacy, and BFLD research primitives.
+- Command/config: `uv run pytest -q tests/unit/test_worldgraph_graph.py tests/unit/test_privacy_bfld.py tests/unit/test_worldgraph_privacy_exports.py`
+- Dataset: deterministic room/sensor/person WorldGraph, semantic provenance, privacy mode rollup, BFLD payload, risk, signature, and demotion fixtures
+- Output path: Milestone 12 focused verification
+- Result: focused M12 tests pass (`16 passed`).
+- Command/config: `uv run pytest -q`; `uv run python -m json.tool notebooks/13_worldgraph_privacy_provenance.ipynb`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: full unit/parity suite and synthetic WorldGraph privacy provenance notebook fixture
+- Output path: parent Milestone 12 verification
+- Result: full tests pass (`181 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 5 code cells with only noninteractive matplotlib warning.
+- Next action: Start Milestone 13 optional later-track research subsets.
 
 ## Analysis Results
 
@@ -162,6 +175,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 9 ports RuVector behavior rather than crate internals: min-cut, attention, sparse solver, and temporal tensor concepts are represented as deterministic NumPy research helpers with tests and notebook coverage.
 - Milestone 10 ports neural/training behavior as a base NumPy research API plus optional PyTorch modules; base tests skip torch-dependent model checks when the `nn` extra is not installed.
 - Milestone 11 ports MAT behavior as local research primitives: disaster events, zones, survivors, vital detection, localization, tracking, triage, and alerts are deterministic Python APIs with no external emergency dispatch integration.
+- Milestone 12 ports WorldGraph/BFLD behavior as deterministic graph, provenance, privacy, and witness primitives; it does not port the full streaming engine or production privacy control plane.
 
 ## Learnings
 
@@ -176,6 +190,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Keep `ruview.ruvector` as the stable public namespace for behavior-level RuVector equivalents; downstream training modules can use these helpers without depending on external Rust/RuVector crates.
 - Keep `ruview.nn` and `ruview.training` importable without torch so dataset/loss/metric/checkpoint/export research can run in the default `uv sync --extra dev` environment.
 - Use explicit aliases for colliding MAT concepts (`DomainLocationUncertainty`, `LocalizationLocationUncertainty`, etc.) so the public namespace remains predictable.
+- Keep `ruview.worldgraph` and `ruview.privacy` separately useful, with `ruview.worldgraph.trust` as the small integration layer for provenance + class demotion + witness hashing.
 
 ## Decisions
 
@@ -187,4 +202,4 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Next
 
-- Start Milestone 12 by mapping WorldGraph provenance/trust/privacy/BFLD behavior into Python graph, trust, privacy-mode, and redaction primitives.
+- Start Milestone 13 by porting scoped optional later-track subsets: HOMECORE research state/automation, nvsim simulator primitives, swarm research models, browser visualization helpers, and desktop hardware tooling equivalents.
