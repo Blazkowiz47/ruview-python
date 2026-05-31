@@ -90,6 +90,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Cleaned Markdown documentation and memory notes to remove local `1Projects` absolute-path prefixes while preserving useful repo-relative references.
 - Filled `notebooks/04_phase_and_amplitude_visualization.ipynb` with a deterministic synthetic CSI phase/amplitude fixture, amplitude and phase plots, expected interpretation, and limitations. Added notebook `04` to the visual-lab scaffolding test.
 - Stripped saved execution counts and outputs from notebooks `00` through `14`; notebooks now carry runnable dummy/synthetic data in code cells without committed output blobs.
+- Updated `README.md` so it describes the completed Milestone 0-13 port, expanded implemented module layout, `uv` checks, and the synthetic/dummy fixture status of the notebooks.
 
 ## Experiments / Runs
 
@@ -189,6 +190,10 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: deterministic synthetic phase/amplitude CSI fixture and all committed notebooks
 - Output path: notebook `04` and notebook hygiene verification
 - Result: notebook `04` JSON valid; smoke executed 2 code cells; notebook JSON/scaffolding tests pass (`2 passed`); every notebook has a `Fixture / simulated source:` line.
+- Command/config: `uv run pytest -q tests/unit/test_notebook_json.py`
+- Dataset: committed notebook JSON/scaffolding after README update
+- Output path: README-adjacent verification
+- Result: notebook JSON/scaffolding tests pass (`2 passed`).
 - Next action: Optional post-port audit with real RuView captures/reference APIs and threshold tuning.
 
 ## Analysis Results
