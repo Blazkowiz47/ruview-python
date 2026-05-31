@@ -91,6 +91,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Filled `notebooks/04_phase_and_amplitude_visualization.ipynb` with a deterministic synthetic CSI phase/amplitude fixture, amplitude and phase plots, expected interpretation, and limitations. Added notebook `04` to the visual-lab scaffolding test.
 - Stripped saved execution counts and outputs from notebooks `00` through `14`; notebooks now carry runnable dummy/synthetic data in code cells without committed output blobs.
 - Updated `README.md` so it describes the completed Milestone 0-13 port, expanded implemented module layout, `uv` checks, and the synthetic/dummy fixture status of the notebooks.
+- Replaced the completed porting `plan.md` with a new Android low-level CSI driver feasibility plan covering approval/safety, chipset recon, Android API limits, root recon, kernel/user export paths, firmware patch feasibility, controlled collection, and decision gates.
 
 ## Experiments / Runs
 
@@ -194,6 +195,10 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: committed notebook JSON/scaffolding after README update
 - Output path: README-adjacent verification
 - Result: notebook JSON/scaffolding tests pass (`2 passed`).
+- Command/config: manual `plan.md` rewrite
+- Dataset: Android CSI feasibility planning around Pixel/rooted-device path and ESP32 baseline collection
+- Output path: `plan.md`
+- Result: old completed porting roadmap replaced with Android low-level CSI driver research plan; no Pixel modification should happen before supervisor approval.
 - Next action: Optional post-port audit with real RuView captures/reference APIs and threshold tuning.
 
 ## Analysis Results
@@ -240,4 +245,5 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Next
 
-- Audit the completed port against real RuView captures/reference APIs and tune synthetic thresholds where recorded data reveals drift.
+- Wait for supervisor approval before any Pixel root/modification.
+- Prepare ESP32 CSI collection as the safe baseline and use the new `plan.md` checklist for Android chipset reconnaissance.
