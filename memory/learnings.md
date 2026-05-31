@@ -15,11 +15,13 @@ Durable findings from this project. Keep this compact and useful for future work
 - Synthetic CSI scenarios now provide deterministic empty-room, person-present, stillness, and walking windows. They are visual/debug fixtures, not calibrated RF channel models.
 - Milestone 4 presence/motion uses deterministic NumPy heuristics rather than a trained detector: rolling baseline stats, positive relative increases, weighted motion components, and debounce are enough to separate the current synthetic empty/still/walking scenarios.
 - Milestone 5 vitals ports the Rust ADR-021 pipeline conceptually with NumPy FFT/PSD helpers instead of exact streaming Rust IIR/FIR/autocorrelation internals. Unit fixtures estimate 18 BPM breathing and 72 BPM heart rate, while notebook confidence remains a tuning signal rather than a calibrated clinical result.
+- Milestone 6 calibration preserves the ADR-135 statistical shape: Welford amplitude mean/variance, circular phase mean/dispersion, median amplitude z-score, median phase drift, and non-mutating amplitude baseline subtraction. The Python save/load path is JSON research format, not Rust binary ABI parity yet.
 
 ## Likely But Needs Verification
 
 - Real ESP32 captures will be needed to tune Milestone 4 thresholds beyond the synthetic simulator.
 - Real ESP32 captures will also be needed to tune vitals confidence thresholds, especially the heart-rate path where synthetic visual fixtures can detect the right peak but still report low confidence.
+- Rust ADR-135 little-endian baseline serialization remains a future parity target if interchange with the Rust tools becomes important.
 
 ## Failed Approaches
 

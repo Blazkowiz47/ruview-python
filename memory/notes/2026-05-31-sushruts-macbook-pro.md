@@ -43,6 +43,9 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Completed Milestone 5 via two clean worker commits:
   - `cd5f90a` adds `src/ruview/vitals/` preprocessing, breathing, heart-rate, quality, smoothing modules, exports, and vitals tests.
   - `6750d38` updates `notebooks/03_breathing_and_heart_rate_bands.ipynb`, adds `docs/porting/vitals.md`, notebook JSON coverage, and a worker memory note.
+- Completed Milestone 6 via two clean worker commits:
+  - `1b34432` updates `notebooks/06_calibration_baseline_drift.ipynb`, adds `docs/porting/calibration-baseline-drift.md`, notebook JSON coverage, and a worker memory note.
+  - `6f72a73` adds `src/ruview/ruvsense/calibration.py`, RuvSense exports, calibration tests, and a worker memory note.
 
 ## Experiments / Runs
 
@@ -74,7 +77,11 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: deterministic sine residuals and synthetic vital notebook fixtures
 - Output path: Milestone 5 vitals API and notebook verification
 - Result: tests pass (`52 passed`); unit tests estimate breathing near 18 BPM and heart near 72 BPM as valid.
-- Next action: Start Milestone 6 calibration/baseline drift with notebook `06_calibration_baseline_drift.ipynb`.
+- Command/config: `uv run pytest -q`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: deterministic empty-room, drift, and localized person/event calibration fixtures
+- Output path: Milestone 6 calibration API and notebook verification
+- Result: tests pass (`59 passed`); calibration notebook smoke executed 7 code cells with only noninteractive matplotlib warnings.
+- Next action: Start Milestone 7 Python research sensing server with simulated, UDP, and replay sources.
 
 ## Analysis Results
 
@@ -84,6 +91,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Python `CsiFrame` deep-copies metadata on construction to better match Rust ownership/move behavior and prevent accidental witness-hash changes from later external metadata mutation.
 - Milestone 4 intentionally ports the Rust motion detector conceptually: weighted variance, temporal delta, phase variance, and subcarrier variance components with baseline-relative thresholds, plus debounce for human-readable empty/still/moving states.
 - Milestone 5 intentionally uses compact NumPy FFT/PSD peak scoring rather than line-by-line streaming Rust filters; this keeps the core install light while preserving the ADR-021 breathing and heart-rate bands.
+- Milestone 6 intentionally uses Python JSON baseline persistence with magic/version metadata, not the Rust ADR-135 little-endian binary ABI. The statistical behavior is ported first; binary parity can be added later if cross-tool interchange is needed.
 
 ## Learnings
 
@@ -92,6 +100,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Use `uv sync --extra dev` and `uv run pytest -q` as the default local workflow.
 - Synthetic presence/motion thresholds are useful for visual lab progress, but real ESP32 captures are still needed before treating scores as calibrated.
 - Synthetic vitals fixtures are enough for API smoke tests and visual notebooks, but confidence/status thresholds remain uncalibrated until real CSI captures are available.
+- Calibration deviation tests confirm empty-like vs person/drift-like synthetic windows, but drift trigger thresholds still need real-room validation.
 
 ## Decisions
 
@@ -99,8 +108,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Blockers
 
-- No current blocker for Milestone 6; calibration and baseline drift modules need to be ported from the Rust reference.
+- No current blocker for Milestone 7; the Python research sensing server and sources need to be built.
 
 ## Next
 
-- Start Milestone 6 by mapping `v2/crates/wifi-densepose-signal/src/ruvsense/calibration.rs` and `field_model.rs` into Python empty-room baselines, Welford stats, deviation scoring, drift triggers, save/load helpers, tests, docs, and `06_calibration_baseline_drift.ipynb`.
+- Start Milestone 7 by mapping `v2/crates/wifi-densepose-sensing-server` into a local FastAPI app with simulated, UDP, and replay sources, WebSocket sensing updates, REST latest/vital-sign endpoints, tests, docs, and examples.
