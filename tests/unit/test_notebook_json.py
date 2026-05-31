@@ -13,6 +13,7 @@ VISUAL_LAB_NOTEBOOKS = {
     "03_breathing_and_heart_rate_bands.ipynb",
     "05_subcarrier_heatmaps.ipynb",
     "06_calibration_baseline_drift.ipynb",
+    "07_multistatic_node_comparison.ipynb",
 }
 
 VISUAL_LAB_PHRASES = (
