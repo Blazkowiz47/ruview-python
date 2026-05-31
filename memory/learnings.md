@@ -23,6 +23,8 @@ Durable findings from this project. Keep this compact and useful for future work
 - Milestone 10 keeps the default neural/training stack NumPy-only while exposing optional PyTorch modules behind the `nn` extra; tests use `pytest.importorskip("torch")` so the base `uv run pytest -q` path stays lightweight.
 - Milestone 11 MAT stays research/local-only: disaster/survivor/vitals/domain objects and range/tracking/triage/alert behavior are ported as deterministic Python primitives, and alert dispatch is intentionally an in-memory lifecycle rather than SMS/MQTT/pager integration.
 - Milestone 12 separates graph/provenance from privacy/BFLD: WorldGraph stays JSON/dataclass based, BFLD preserves the 86-byte little-endian header and sectioned payload behavior, and the engine-style trust path is a small witness helper rather than a full streaming-engine port.
+- Milestone 13 optional tracks are deliberately pure research helpers: HOMECORE has local state/automation semantics, nvsim is a deterministic magnetic-scene simulator, swarm is simulation-only, and browser/desktop helpers build data plans without live browser, serial, flashing, sidecar, or network side effects.
+- The full `plan.md` milestone stack is implemented through Milestone 13; the remaining high-value work is validation and tuning against real captures/reference behavior, not initial capability porting.
 
 ## Likely But Needs Verification
 
@@ -35,6 +37,7 @@ Durable findings from this project. Keep this compact and useful for future work
 - Milestone 10 synthetic datasets and notebooks verify shapes and APIs, not training quality; real CSI/pose datasets are required before any model-performance claims.
 - MAT thresholds and localization confidence are synthetic-fixture calibrated only; real rubble/debris CSI or UWB-style captures are needed before using M11 outputs as operational rescue evidence.
 - M12 privacy and trust fixtures validate deterministic mechanics, not regulatory compliance; real deployment policy review is still needed before interpreting privacy modes as production guarantees.
+- M13 HOMECORE/nvsim/swarm/browser/desktop helpers are synthetic-fixture verified only; live device behavior, browser rendering, and drone/serial/server integration remain out of scope until explicit hardware-backed experiments are added.
 
 ## Failed Approaches
 
@@ -49,3 +52,4 @@ Durable findings from this project. Keep this compact and useful for future work
 - Export optional neural components through `ruview.nn` with placeholders that explain the `uv sync --extra nn` path, while keeping NumPy-safe tensor, contrastive, dataset, loss, metric, checkpoint, and export helpers usable in the base environment.
 - For namespaces with duplicate domain/localization concepts, export explicit aliases such as `DomainLocationUncertainty` and `LocalizationLocationUncertainty` to avoid accidental public-symbol overwrites after parallel worker slices land.
 - Keep public package exports and tiny cross-module smoke tests as the parent integration layer after parallel workers; this caught the M12 composition boundary between WorldGraph provenance and BFLD privacy classes.
+- Keep optional later-track modules side-effect free by default; deterministic data builders and simulation objects are easier to test, document, and compose with notebooks than live-control adapters.

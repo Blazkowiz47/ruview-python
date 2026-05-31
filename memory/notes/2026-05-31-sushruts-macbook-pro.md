@@ -80,6 +80,13 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `05b5d9b` adds WorldGraph dataclass nodes/edges, graph snapshot/query/provenance/rollup helpers, tests, and a worker memory note.
   - `65922dd` adds BFLD header/payload/CRC primitives, privacy modes, attestation chain, identity-risk/signature helpers, privacy demotion, tests, and a worker memory note.
   - Parent integration exports public APIs through `ruview.worldgraph` and `ruview.privacy`, adds trust-throughline witness helpers, and adds a public composition smoke test.
+- Completed Milestone 13 optional later tracks in worker commits and a parent export integration:
+  - `3fc81b9` adds the deterministic `ruview.nvsim` magnetic scene, propagation, canonical frame, pipeline, tests, and worker memory note.
+  - `35640e9` adds browser visualization payload/fusion helpers, desktop hardware-planning helpers, tests, and worker memory note.
+  - `de0b808` adds `docs/porting/optional-tracks.md`, `notebooks/14_optional_tracks_research_overview.ipynb`, notebook JSON coverage, and worker memory note.
+  - `b5aeb1d` adds HOMECORE state and automation research primitives, tests, and worker memory note.
+  - `a4bbd5e` adds swarm topology, formation, planning, sensing/fusion research primitives, tests, and worker memory note.
+  - Parent integration exports desktop hardware helpers through `ruview.hardware` and adds `tests/unit/test_optional_exports.py` as a cross-package smoke test.
 
 ## Experiments / Runs
 
@@ -159,7 +166,19 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: full unit/parity suite and synthetic WorldGraph privacy provenance notebook fixture
 - Output path: parent Milestone 12 verification
 - Result: full tests pass (`181 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning); notebook JSON valid; notebook smoke executed 5 code cells with only noninteractive matplotlib warning.
-- Next action: Start Milestone 13 optional later-track research subsets.
+- Command/config: `uv run pytest -q tests/unit/test_homecore_research.py tests/unit/test_nvsim_research.py tests/unit/test_swarm_research.py tests/unit/test_desktop_browser_helpers.py tests/unit/test_optional_exports.py`
+- Dataset: deterministic HOMECORE state/automation, nvsim magnetic scenes, swarm topology/fusion, browser pose/fusion payloads, and desktop provisioning fixtures
+- Output path: Milestone 13 focused verification
+- Result: focused M13 tests pass (`31 passed`).
+- Command/config: `uv run python -m json.tool notebooks/14_optional_tracks_research_overview.ipynb`; `MPLBACKEND=Agg uv run --extra research python <notebook smoke>`
+- Dataset: synthetic optional-track overview notebook fixtures
+- Output path: notebook `14` verification
+- Result: notebook JSON valid; smoke executed 5 code cells with only noninteractive matplotlib warnings.
+- Command/config: `uv run pytest -q`
+- Dataset: full unit/parity suite after all `plan.md` milestones
+- Output path: parent Milestone 13 verification
+- Result: full tests pass (`212 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning).
+- Next action: Optional post-port audit with real RuView captures/reference APIs and threshold tuning.
 
 ## Analysis Results
 
@@ -176,6 +195,8 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Milestone 10 ports neural/training behavior as a base NumPy research API plus optional PyTorch modules; base tests skip torch-dependent model checks when the `nn` extra is not installed.
 - Milestone 11 ports MAT behavior as local research primitives: disaster events, zones, survivors, vital detection, localization, tracking, triage, and alerts are deterministic Python APIs with no external emergency dispatch integration.
 - Milestone 12 ports WorldGraph/BFLD behavior as deterministic graph, provenance, privacy, and witness primitives; it does not port the full streaming engine or production privacy control plane.
+- Milestone 13 ports the optional later tracks as side-effect-free research helpers: HOMECORE state/automation, nvsim magnetic-scene simulation, swarm simulation models, browser payload builders, and desktop hardware-planning descriptors. It does not open browsers, serial ports, network sockets, sidecars, or live flight-control links.
+- The original `plan.md` milestone list is now implemented through Milestone 13; remaining work should be framed as validation, parity hardening, real-data calibration, or new scope rather than unfinished initial porting.
 
 ## Learnings
 
@@ -191,6 +212,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Keep `ruview.nn` and `ruview.training` importable without torch so dataset/loss/metric/checkpoint/export research can run in the default `uv sync --extra dev` environment.
 - Use explicit aliases for colliding MAT concepts (`DomainLocationUncertainty`, `LocalizationLocationUncertainty`, etc.) so the public namespace remains predictable.
 - Keep `ruview.worldgraph` and `ruview.privacy` separately useful, with `ruview.worldgraph.trust` as the small integration layer for provenance + class demotion + witness hashing.
+- Keep optional later-track modules pure and deterministic by default so notebooks and tests can compose them without hardware, browser, drone, or sidecar dependencies.
 
 ## Decisions
 
@@ -202,4 +224,4 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 
 ## Next
 
-- Start Milestone 13 by porting scoped optional later-track subsets: HOMECORE research state/automation, nvsim simulator primitives, swarm research models, browser visualization helpers, and desktop hardware tooling equivalents.
+- Audit the completed port against real RuView captures/reference APIs and tune synthetic thresholds where recorded data reveals drift.
