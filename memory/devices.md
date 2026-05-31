@@ -6,7 +6,7 @@ Use stable lowercase node slugs for project notes, for example `oslo-laptop`, `w
 
 | Node | Type | Role | Project path | Environment | Notes |
 |---|---|---|---|---|---|
-| sushruts-macbook-pro | laptop | development / planning | /Users/sushrutpatwardhan/1Projects/ruview-python |  | Local MacBook used for current project setup and memory initialization. |
+| sushruts-macbook-pro | laptop | development / planning | ruview-python |  | Local MacBook used for current project setup and memory initialization. |
 
 ## Notes
 

@@ -7,14 +7,14 @@ captured replay data are available.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/multistatic.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/phase_align.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/multiband.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/coherence.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/coherence_gate.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/cir.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/field_model.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/tomography.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/multistatic.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/phase_align.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/multiband.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/coherence.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/coherence_gate.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/cir.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/field_model.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/tomography.rs`
 
 The multistatic Rust reference fuses the first channel from each
 `MultiBandCsiFrame`, computes attention weights from amplitude agreement with a

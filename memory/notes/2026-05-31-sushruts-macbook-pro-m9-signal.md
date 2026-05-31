@@ -1,7 +1,7 @@
 # 2026-05-31 sushruts-macbook-pro M9 signal
 
 - Node: sushruts-macbook-pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`
 - Scope: Milestone 9 RuVector signal equivalents; owned files only.
 

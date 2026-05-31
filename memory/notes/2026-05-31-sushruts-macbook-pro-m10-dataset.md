@@ -6,7 +6,7 @@ node: sushruts-macbook-pro
 node_type: laptop
 device: Sushrut's MacBook Pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit:
 sync_status: draft

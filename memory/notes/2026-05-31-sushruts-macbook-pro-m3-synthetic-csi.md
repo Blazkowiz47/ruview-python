@@ -1,7 +1,7 @@
 # 2026-05-31 - sushruts-macbook-pro - Milestone 3 synthetic CSI
 
 - Node: sushruts-macbook-pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch/base: `master` at `fbf21db Record milestone 2 completion`
 
 ## Session Log

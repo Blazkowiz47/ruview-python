@@ -4,11 +4,11 @@ Milestone 6 adds a Python research notebook for empty-room baseline calibration 
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/calibration.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/ruvsense/field_model.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/docs/adr/ADR-135-empty-room-baseline-calibration.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/tests/calibration_synthetic.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/tests/calibration_drift.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/calibration.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/ruvsense/field_model.rs`
+- `RuView/docs/adr/ADR-135-empty-room-baseline-calibration.md`
+- `RuView/v2/crates/wifi-densepose-signal/tests/calibration_synthetic.rs`
+- `RuView/v2/crates/wifi-densepose-signal/tests/calibration_drift.rs`
 
 The Rust calibration module captures a per-subcarrier empty-room baseline with Welford amplitude mean/variance and circular phase mean/dispersion. Runtime scoring compares live CSI to that baseline using median amplitude z-scores and median circular phase drift, while the longer drift path watches rolling squared z-score energy for sustained environmental changes.
 

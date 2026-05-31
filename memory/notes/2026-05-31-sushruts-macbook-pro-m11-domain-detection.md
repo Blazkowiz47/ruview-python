@@ -3,7 +3,7 @@ date: 2026-05-31
 work_date: 2026-05-31
 project: ruview-python
 node: sushruts-macbook-pro
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 source_format: node-specific
 tags: [milestone-11, mat, domain, detection, numpy]

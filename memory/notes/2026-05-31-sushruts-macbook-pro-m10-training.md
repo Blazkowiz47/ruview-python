@@ -6,7 +6,7 @@ node: sushruts-macbook-pro
 node_type: laptop
 device: Sushrut's MacBook Pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 sync_status: draft
 source_format: node-specific
@@ -24,10 +24,10 @@ tags: [phd, research, ruview, wifi-densepose, python, training]
 
 ## References
 
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/losses.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/metrics.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/trainer.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/onnx.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/losses.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/metrics.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/trainer.rs`
+- `RuView/v2/crates/wifi-densepose-nn/src/onnx.rs`
 
 ## Next
 

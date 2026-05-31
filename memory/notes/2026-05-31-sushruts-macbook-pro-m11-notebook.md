@@ -2,7 +2,7 @@
 
 - Node: `sushruts-macbook-pro`
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master` at `dd47a8c` before this worker commit
 - Owned scope: `docs/porting/mat.md`, `notebooks/12_mat_research_pipeline.ipynb`, `tests/unit/test_notebook_json.py`
 

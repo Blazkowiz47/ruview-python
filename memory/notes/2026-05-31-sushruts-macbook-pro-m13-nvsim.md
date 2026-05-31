@@ -1,7 +1,7 @@
 # 2026-05-31 - sushruts-macbook-pro - m13 nvsim
 
 - Node: sushruts-macbook-pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`
 - Start commit: `d146a90`
 - Task: Port compact deterministic nvsim Python research subset from Rust behavior-level primitives.

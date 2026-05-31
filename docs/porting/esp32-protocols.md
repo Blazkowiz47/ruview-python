@@ -13,19 +13,19 @@ ordered as `I, Q`.
 
 | Source | Why it matters |
 |---|---|
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/csi_collector.h:14` | `CSI_MAGIC`, `CSI_HEADER_SIZE`, and max CSI frame size. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/csi_collector.c:107` | Authoritative raw CSI header layout and serializer. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/csi_collector.c:306` | Authoritative ADR-110 sync-packet construction. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/edge_processing.h:94` | Packed edge vitals, feature-vector, and fused-vitals structs. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/edge_processing.c:556` | Edge vitals/fused packet population and send path. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/wasm_runtime.h:46` | WASM output magic and packed event packet structs. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/main/wasm_runtime.c:346` | WASM event dead-band filtering and variable-length send size. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-hardware/src/esp32_parser.rs:39` | Rust ADR-018 parser and sibling-packet magic registry. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-hardware/src/sync_packet.rs:10` | Rust ADR-110 sync-packet decoder and canonical behavior. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/archive/v1/tests/unit/test_esp32_binary_parser.py:26` | Archived Python parser tests with ADR-110 byte 18/19 and sync parity vectors. |
+| `RuView/firmware/esp32-csi-node/main/csi_collector.h:14` | `CSI_MAGIC`, `CSI_HEADER_SIZE`, and max CSI frame size. |
+| `RuView/firmware/esp32-csi-node/main/csi_collector.c:107` | Authoritative raw CSI header layout and serializer. |
+| `RuView/firmware/esp32-csi-node/main/csi_collector.c:306` | Authoritative ADR-110 sync-packet construction. |
+| `RuView/firmware/esp32-csi-node/main/edge_processing.h:94` | Packed edge vitals, feature-vector, and fused-vitals structs. |
+| `RuView/firmware/esp32-csi-node/main/edge_processing.c:556` | Edge vitals/fused packet population and send path. |
+| `RuView/firmware/esp32-csi-node/main/wasm_runtime.h:46` | WASM output magic and packed event packet structs. |
+| `RuView/firmware/esp32-csi-node/main/wasm_runtime.c:346` | WASM event dead-band filtering and variable-length send size. |
+| `RuView/v2/crates/wifi-densepose-hardware/src/esp32_parser.rs:39` | Rust ADR-018 parser and sibling-packet magic registry. |
+| `RuView/v2/crates/wifi-densepose-hardware/src/sync_packet.rs:10` | Rust ADR-110 sync-packet decoder and canonical behavior. |
+| `RuView/archive/v1/tests/unit/test_esp32_binary_parser.py:26` | Archived Python parser tests with ADR-110 byte 18/19 and sync parity vectors. |
 
 Some older host paths are not authoritative for the current wire format. In
-particular, `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/main.rs:1167`
+particular, `RuView/v2/crates/wifi-densepose-sensing-server/src/main.rs:1167`
 documents the current 20-byte header but its parsing code reads several fields at
 stale offsets. Prefer the firmware plus `wifi-densepose-hardware` parser as the
 source of truth.

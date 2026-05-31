@@ -12,7 +12,7 @@ system and ports it capability by capability into a readable, experiment-first
 Python codebase.
 
 ```text
-/Users/sushrutpatwardhan/1Projects/RuView
+RuView
 ```
 
 This is not a product rewrite. It favors clear NumPy/SciPy/PyTorch

@@ -9,12 +9,12 @@ contracts before taking on production features from the Axum server.
 
 | Source | Why it matters |
 |---|---|
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/README.md` | High-level Rust server architecture and default ports. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/main.rs` | Axum routes, WebSocket broadcast path, simulated source, UDP ingest loop, and latest/vitals endpoints. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/types.rs` | `SensingUpdate`, node, feature, classification, field, and vital-sign structures. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/recording.rs` | JSONL recording rows written from processed CSI frames. |
-| `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-hardware/src/esp32_parser.rs` | Rust ESP32 CSI parser reference used by the live UDP path. |
-| `/Users/sushrutpatwardhan/1Projects/ruview-python/src/ruview/protocols/esp32.py` | Current Python ESP32 UDP packet parser. |
+| `RuView/v2/crates/wifi-densepose-sensing-server/README.md` | High-level Rust server architecture and default ports. |
+| `RuView/v2/crates/wifi-densepose-sensing-server/src/main.rs` | Axum routes, WebSocket broadcast path, simulated source, UDP ingest loop, and latest/vitals endpoints. |
+| `RuView/v2/crates/wifi-densepose-sensing-server/src/types.rs` | `SensingUpdate`, node, feature, classification, field, and vital-sign structures. |
+| `RuView/v2/crates/wifi-densepose-sensing-server/src/recording.rs` | JSONL recording rows written from processed CSI frames. |
+| `RuView/v2/crates/wifi-densepose-hardware/src/esp32_parser.rs` | Rust ESP32 CSI parser reference used by the live UDP path. |
+| `ruview-python/src/ruview/protocols/esp32.py` | Current Python ESP32 UDP packet parser. |
 
 ## Python Server Intent
 

@@ -2,7 +2,7 @@
 
 - Node: sushruts-macbook-pro
 - Device/server: local MacBook Pro
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch: `master`
 - Scope: Milestone 10 neural/training docs and notebooks only.
 

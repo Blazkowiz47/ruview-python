@@ -6,7 +6,7 @@ node: sushruts-macbook-pro
 node_type: laptop
 device: Sushrut's MacBook Pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit: worker commit `Add CIR and coherence primitives`
 sync_status: draft
@@ -26,7 +26,7 @@ tags: [phd, research, ruview, wifi-densepose, python, ruvsense, cir, coherence]
 
 ## Source Reference
 
-- Reference repo: `/Users/sushrutpatwardhan/1Projects/RuView`
+- Reference repo: `RuView`
 - Rust sources read:
   - `v2/crates/wifi-densepose-signal/src/ruvsense/cir.rs`
   - `v2/crates/wifi-densepose-signal/src/ruvsense/coherence.rs`

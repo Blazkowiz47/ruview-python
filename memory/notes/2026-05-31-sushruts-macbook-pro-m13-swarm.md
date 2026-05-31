@@ -1,7 +1,7 @@
 # 2026-05-31 sushruts-macbook-pro m13 swarm
 
 - Node: sushruts-macbook-pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch/base commit: `master` at `de0b808`
 
 ## Log

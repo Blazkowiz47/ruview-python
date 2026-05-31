@@ -2,7 +2,7 @@
 
 - Node: sushruts-macbook-pro
 - Device: Sushrut's MacBook Pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`
 - Worker scope: Milestone 4 notebook/docs only; avoided `src/ruview/signal/*` classifier files owned by another worker.
 

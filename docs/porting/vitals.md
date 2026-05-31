@@ -4,12 +4,12 @@ Milestone 5 covers the first Python research notebook for breathing and heart-ra
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-vitals`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-vitals/src/preprocessor.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-vitals/src/breathing.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-vitals/src/heartrate.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/vital_signs.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/firmware/esp32-csi-node/README.md`
+- `RuView/v2/crates/wifi-densepose-vitals`
+- `RuView/v2/crates/wifi-densepose-vitals/src/preprocessor.rs`
+- `RuView/v2/crates/wifi-densepose-vitals/src/breathing.rs`
+- `RuView/v2/crates/wifi-densepose-vitals/src/heartrate.rs`
+- `RuView/v2/crates/wifi-densepose-sensing-server/src/vital_signs.rs`
+- `RuView/firmware/esp32-csi-node/README.md`
 
 The Rust vitals crate uses EMA static suppression to produce per-subcarrier residuals, breathing extraction in the 0.1-0.5 Hz band, heart-rate extraction in the 0.8-2.0 Hz band, confidence/status values, and historical storage. The sensing-server reference also documents FFT-based spectral peak extraction and signal-quality heuristics. The ESP32 firmware README records the edge Tier 2 bands and caveats for breathing, heart rate, presence, fall detection, and vitals packets.
 

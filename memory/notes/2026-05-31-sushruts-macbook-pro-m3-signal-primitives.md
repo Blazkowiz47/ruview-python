@@ -4,7 +4,7 @@
 
 - Node: sushruts-macbook-pro-m3
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master`, starting from `fbf21db Record milestone 2 completion`
 
 ## Source mappings

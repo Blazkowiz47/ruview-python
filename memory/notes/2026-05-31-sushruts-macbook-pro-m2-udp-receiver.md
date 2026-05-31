@@ -7,7 +7,7 @@ node_type: laptop
 device: Sushrut's MacBook Pro
 server:
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit: pending
 sync_status: draft
@@ -27,8 +27,8 @@ tags: [phd, research, ruview, wifi-densepose, python, esp32, udp, csi]
 
 ## Source Mappings
 
-- Python receiver surface maps to the host-side receive loops in `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-hardware/src/aggregator/mod.rs` and `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-hardware/src/bin/aggregator.rs`.
-- Timeout and parse-accounting behavior was cross-checked against `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/integration/csi_receiver.rs`.
+- Python receiver surface maps to the host-side receive loops in `RuView/v2/crates/wifi-densepose-hardware/src/aggregator/mod.rs` and `RuView/v2/crates/wifi-densepose-hardware/src/bin/aggregator.rs`.
+- Timeout and parse-accounting behavior was cross-checked against `RuView/v2/crates/wifi-densepose-mat/src/integration/csi_receiver.rs`.
 - Deliberate Python deviation: no background thread or channel; `UdpReceiver.receive()` is a simple blocking call returning one parsed packet or `None` on timeout.
 
 ## Command / Config

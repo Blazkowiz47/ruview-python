@@ -4,7 +4,7 @@ work_date: 2026-05-31
 project: ruview-python
 node: sushruts-macbook-pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit: pending
 source_format: node-specific

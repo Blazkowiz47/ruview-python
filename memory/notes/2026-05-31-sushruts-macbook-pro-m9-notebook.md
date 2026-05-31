@@ -2,7 +2,7 @@
 
 - Node: `sushruts-macbook-pro`
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master` at `4d32ea6` before this worker commit
 - Owned scope: `docs/porting/ruvector.md`, `notebooks/11_ruvector_signal_geometry.ipynb`, `tests/unit/test_notebook_json.py`
 

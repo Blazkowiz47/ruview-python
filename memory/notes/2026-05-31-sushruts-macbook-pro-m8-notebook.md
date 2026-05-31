@@ -2,7 +2,7 @@
 
 - Node: `sushruts-macbook-pro`
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master` at `4fdd32c` before this worker commit
 - Owned scope: `notebooks/07_multistatic_node_comparison.ipynb`, `docs/porting/ruvsense-advanced.md`, `tests/unit/test_notebook_json.py`
 

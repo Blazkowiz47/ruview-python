@@ -9,19 +9,19 @@ to the Rust reference.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/signal/subcarrier.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/signal/spectrogram.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/signal/bvp.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/signal/fresnel.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/attention.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/geometry.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/fusion.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/coherence.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/mat/triangulation.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/mat/breathing.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-ruvector/src/mat/heartbeat.rs`
+- `ruview-python/plan.md`
+- `RuView/v2/crates/wifi-densepose-ruvector/README.md`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/signal/subcarrier.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/signal/spectrogram.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/signal/bvp.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/signal/fresnel.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/attention.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/geometry.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/fusion.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/viewpoint/coherence.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/mat/triangulation.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/mat/breathing.rs`
+- `RuView/v2/crates/wifi-densepose-ruvector/src/mat/heartbeat.rs`
 
 ## Deliverable Map
 

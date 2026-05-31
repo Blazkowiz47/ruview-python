@@ -1,7 +1,7 @@
 # 2026-05-31 - sushruts-macbook-pro - M13 Desktop/Browser Helpers
 
 - Node: `sushruts-macbook-pro`
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`; starting HEAD `d146a90`
 
 ## Log

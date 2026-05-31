@@ -4,8 +4,8 @@ Milestone 4 ports the first presence and motion experiments from the Rust RuView
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-signal/src/motion.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/csi.rs`
+- `RuView/v2/crates/wifi-densepose-signal/src/motion.rs`
+- `RuView/v2/crates/wifi-densepose-sensing-server/src/csi.rs`
 
 The Rust signal module combines variance, correlation, phase, and optional Doppler components into a normalized motion score. The sensing server adds frame-history features, baseline adjustment, smoothing, debounce, and simple motion labels using thresholds around absent, still, moving, and active states.
 

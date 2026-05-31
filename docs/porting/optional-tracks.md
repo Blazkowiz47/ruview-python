@@ -7,29 +7,29 @@ or a parity port of every Rust subsystem.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore/src/state.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore/src/bus.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore-automation/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore-automation/src/trigger.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/homecore-automation/src/engine.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/nvsim/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/nvsim/src/pipeline.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/nvsim/src/proof.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/nvsim/src/wasm.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/ruview-swarm/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/ruview-swarm/src/planning/probability_grid.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/ruview-swarm/src/sensing/multiview.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/ruview-swarm/evals/RESULTS.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/lib.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/discovery.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/flash.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/ota.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/provision.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/server.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/src/commands/wasm.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-desktop/ui/src/App.tsx`
+- `ruview-python/plan.md`
+- `RuView/v2/crates/homecore/README.md`
+- `RuView/v2/crates/homecore/src/state.rs`
+- `RuView/v2/crates/homecore/src/bus.rs`
+- `RuView/v2/crates/homecore-automation/README.md`
+- `RuView/v2/crates/homecore-automation/src/trigger.rs`
+- `RuView/v2/crates/homecore-automation/src/engine.rs`
+- `RuView/v2/crates/nvsim/README.md`
+- `RuView/v2/crates/nvsim/src/pipeline.rs`
+- `RuView/v2/crates/nvsim/src/proof.rs`
+- `RuView/v2/crates/nvsim/src/wasm.rs`
+- `RuView/v2/crates/ruview-swarm/README.md`
+- `RuView/v2/crates/ruview-swarm/src/planning/probability_grid.rs`
+- `RuView/v2/crates/ruview-swarm/src/sensing/multiview.rs`
+- `RuView/v2/crates/ruview-swarm/evals/RESULTS.md`
+- `RuView/v2/crates/wifi-densepose-desktop/src/lib.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/discovery.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/flash.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/ota.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/provision.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/server.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/src/commands/wasm.rs`
+- `RuView/v2/crates/wifi-densepose-desktop/ui/src/App.tsx`
 
 ## Deliverable Map
 

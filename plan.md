@@ -6,7 +6,7 @@ This project is a pure Python research port of the RuView / WiFi-DensePose
 repository at:
 
 ```text
-/Users/sushrutpatwardhan/1Projects/RuView
+RuView
 ```
 
 The goal is to port the functionality one capability at a time into a readable,

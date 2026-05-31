@@ -6,7 +6,7 @@ node: sushruts-macbook-pro
 node_type: laptop
 device: Sushrut's MacBook Pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit: worker commit `Document sensing server examples`
 sync_status: draft
@@ -25,7 +25,7 @@ tags: [phd, research, ruview, wifi-densepose, python, sensing-server, milestone-
 
 ## Source Reference
 
-- Reference repo: `/Users/sushrutpatwardhan/1Projects/RuView`
+- Reference repo: `RuView`
 - Rust sources read: `v2/crates/wifi-densepose-sensing-server/README.md`, `src/main.rs`, `src/types.rs`, and `src/recording.rs`.
 - Python context read: `src/ruview/server/__init__.py`, `src/ruview/hardware/udp_receiver.py`, `src/ruview/protocols/esp32.py`, and existing Milestone 7 examples.
 

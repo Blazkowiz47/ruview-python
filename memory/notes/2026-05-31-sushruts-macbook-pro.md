@@ -7,7 +7,7 @@ node_type: laptop
 device: Sushrut's MacBook Pro
 server:
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch:
 commit:
 sync_status: draft
@@ -28,7 +28,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Created project `AGENTS.md` containing the Sushrut memory block.
 - Created project-local portable memory command specs under `memory/commands/`.
 - Captured the current repo state as not a Git repository; the only discovered project file is `plan.md`.
-- Read `plan.md` and checked the Rust reference core crate at `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-core`.
+- Read `plan.md` and checked the Rust reference core crate at `RuView/v2/crates/wifi-densepose-core`.
 - Created Milestone 0 scaffold: `pyproject.toml`, `src/ruview/`, `tests/`, `notebooks/`, `examples/`, and `data/` fixture folders.
 - Added initial Milestone 1 core-contract port: `ComplexSample`, `FrameId`, `DeviceId`, `Timestamp`, `Confidence`, `FrequencyBand`, `AntennaConfig`, `CsiMetadata`, `CsiFrame`, `Keypoint`, `PersonPose`, `PoseEstimate`, canonical bytes, and BLAKE3 witness hashing.
 - Added unit/parity tests, a fixed ADR-136 witness vector, and `examples/simulate_empty_vs_present.py`.
@@ -87,6 +87,7 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
   - `b5aeb1d` adds HOMECORE state and automation research primitives, tests, and worker memory note.
   - `a4bbd5e` adds swarm topology, formation, planning, sensing/fusion research primitives, tests, and worker memory note.
   - Parent integration exports desktop hardware helpers through `ruview.hardware` and adds `tests/unit/test_optional_exports.py` as a cross-package smoke test.
+- Cleaned Markdown documentation and memory notes to remove local `1Projects` absolute-path prefixes while preserving useful repo-relative references.
 
 ## Experiments / Runs
 
@@ -178,11 +179,15 @@ tags: [phd, research, ruview, wifi-densepose, python, csi, signal-processing]
 - Dataset: full unit/parity suite after all `plan.md` milestones
 - Output path: parent Milestone 13 verification
 - Result: full tests pass (`212 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning).
+- Command/config: `rg` scan for local `1Projects` absolute-path prefixes in Markdown/notebook-style docs
+- Dataset: docs, porting notes, project memory notes, README, and plan
+- Output path: documentation cleanup verification
+- Result: no remaining matches after replacing those prefixes with repo-name references.
 - Next action: Optional post-port audit with real RuView captures/reference APIs and threshold tuning.
 
 ## Analysis Results
 
-- `plan.md` frames this as a pure Python research port of RuView / WiFi-DensePose from `/Users/sushrutpatwardhan/1Projects/RuView`.
+- `plan.md` frames this as a pure Python research port of RuView / WiFi-DensePose from `RuView`.
 - The port should prioritize readable implementations, fixtures, tests, and notebooks over product packaging or commercial polish.
 - Rust `wifi-densepose-core` canonical frame layout uses UUID bytes, fixed little-endian metadata fields, length-prefixed UTF-8 device id, 16 zero bytes for missing calibration id, `(nrows, ncols)` as `u32`, and stream-major complex samples as `f64 re || f64 im`.
 - Python `CsiFrame` deep-copies metadata on construction to better match Rust ownership/move behavior and prevent accidental witness-hash changes from later external metadata mutation.

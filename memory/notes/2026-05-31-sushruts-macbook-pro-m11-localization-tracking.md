@@ -1,7 +1,7 @@
 # 2026-05-31 sushruts-macbook-pro M11 localization/tracking
 
 - Node: sushruts-macbook-pro
-- Repo: /Users/sushrutpatwardhan/1Projects/ruview-python
+- Repo: ruview-python
 - Branch: master
 - Scope: MAT localization and tracking primitives in owned files only.
 - Started port from Rust MAT references for triangulation, range constraints, position fusion, depth estimation, Kalman tracking, lifecycle, nearest-neighbor association, and CSI fingerprint matching.

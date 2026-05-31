@@ -1,7 +1,7 @@
 # 2026-05-31 sushruts-macbook-pro M8 fusion
 
 - Node: sushruts-macbook-pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`
 - Scope: Milestone 8 RuvSense fusion worker; owned files only.
 

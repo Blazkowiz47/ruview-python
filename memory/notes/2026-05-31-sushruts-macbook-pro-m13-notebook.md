@@ -2,7 +2,7 @@
 
 - Node: `sushruts-macbook-pro`
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master` at `35640e9` before this worker commit
 - Owned scope: `docs/porting/optional-tracks.md`, `notebooks/14_optional_tracks_research_overview.ipynb`, `tests/unit/test_notebook_json.py`, `memory/notes/2026-05-31-sushruts-macbook-pro-m13-notebook.md`
 

@@ -4,7 +4,7 @@
 
 - Node: sushruts-macbook-pro
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch: `master`
 - Scope: notebook/docs worker only; avoided `src/ruview/ruvsense/*` while a separate worker owns core calibration modules.
 

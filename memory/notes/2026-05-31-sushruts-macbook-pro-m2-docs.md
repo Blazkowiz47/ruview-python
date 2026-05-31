@@ -2,7 +2,7 @@
 
 - Node: sushruts-macbook-pro-m2-docs
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch: `master`
 
 ## Worker C - Milestone 2 ESP32 protocol docs

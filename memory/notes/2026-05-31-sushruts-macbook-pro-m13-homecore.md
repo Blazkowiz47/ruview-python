@@ -2,7 +2,7 @@
 
 - Node: sushruts-macbook-pro
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch: `master`
 - Commit: pending at note write for `Add HOMECORE research primitives`
 

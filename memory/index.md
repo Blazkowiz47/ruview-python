@@ -5,7 +5,7 @@
 Status: porting-plan-complete
 Domain: phd
 Tags: phd, research, ruview, wifi-densepose, python, csi, signal-processing
-Project path: /Users/sushrutpatwardhan/1Projects/ruview-python
+Project path: ruview-python
 Main brain workstream: /Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md
 Devices/servers: sushruts-macbook-pro
 Latest useful result: Milestone 13 is implemented and the `plan.md` porting milestones are complete: HOMECORE state/automation research subset, nvsim deterministic magnetometer simulator, swarm topology/formation/planning/fusion primitives, browser visualization helpers, desktop hardware-tooling planners, optional-track docs/notebook, public `ruview.hardware` desktop exports, and a cross-package export smoke test. Parent verification: focused M13 tests (`31 passed`), notebook `14` JSON and `MPLBACKEND=Agg` smoke (`5` code cells), and `uv run pytest -q` (`212 passed`, `5 skipped`, 1 existing FastAPI/Starlette warning).
@@ -14,7 +14,7 @@ Next action: Optional post-port audit against real RuView captures/reference API
 
 ## Active Threads
 
-- Build a readable, experiment-friendly Python research port of RuView / WiFi-DensePose from `/Users/sushrutpatwardhan/1Projects/RuView`.
+- Build a readable, experiment-friendly Python research port of RuView / WiFi-DensePose from `RuView`.
 - Port by capability boundary rather than line-by-line translation.
 - Preserve data contracts and wire formats where they matter, with fixtures, tests, and notebooks for inspection.
 
@@ -38,6 +38,7 @@ Next action: Optional post-port audit against real RuView captures/reference API
 - 2026-05-31: Completed Milestone 11 in five commits: `9e7c901` MAT docs/notebook, `2195498` triage/local alerts, `c929e4d` localization/tracking, `698e5fe` domain/detection, and parent public-export integration. Parent verification: `uv run pytest -q` (`165 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `12`.
 - 2026-05-31: Completed Milestone 12 in four commits: `851cc02` docs/notebook, `05b5d9b` WorldGraph graph/provenance, `65922dd` BFLD privacy primitives, and parent public-export/trust-throughline integration. Parent verification: `uv run pytest -q` (`181 passed`, `5 skipped`) plus notebook JSON and `MPLBACKEND=Agg` notebook smoke for notebook `13`.
 - 2026-05-31: Completed Milestone 13 in worker commits: `3fc81b9` nvsim simulator, `35640e9` desktop/browser helpers, `de0b808` optional-track docs/notebook, `b5aeb1d` HOMECORE primitives, `a4bbd5e` swarm models, plus parent public-export integration for `ruview.hardware` and cross-package smoke coverage. Parent verification: focused M13 tests (`31 passed`), notebook `14` JSON/smoke, and `uv run pytest -q` (`212 passed`, `5 skipped`).
+- 2026-05-31: Cleaned documentation and memory notes to remove local `1Projects` absolute-path prefixes, leaving repo-name references such as `RuView/...` and `ruview-python/...`.
 
 ## Recent Runs
 
@@ -58,5 +59,5 @@ Next action: Optional post-port audit against real RuView captures/reference API
 ## Links
 
 - Main workstream: `/Users/sushrutpatwardhan/sushrut/wiki/workstreams/ruview-python/index.md`
-- Port plan: `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- Reference repository: `/Users/sushrutpatwardhan/1Projects/RuView`
+- Port plan: `ruview-python/plan.md`
+- Reference repository: `RuView`

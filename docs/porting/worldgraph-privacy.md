@@ -7,15 +7,15 @@ privacy gates, and witness replay can follow once the research contracts settle.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-worldgraph/src/model.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-worldgraph/src/graph.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-engine/src/lib.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-bfld/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-bfld/src/privacy_mode.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-bfld/src/privacy_gate.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-bfld/src/identity_risk.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-bfld/src/frame.rs`
+- `ruview-python/plan.md`
+- `RuView/v2/crates/wifi-densepose-worldgraph/src/model.rs`
+- `RuView/v2/crates/wifi-densepose-worldgraph/src/graph.rs`
+- `RuView/v2/crates/wifi-densepose-engine/src/lib.rs`
+- `RuView/v2/crates/wifi-densepose-bfld/README.md`
+- `RuView/v2/crates/wifi-densepose-bfld/src/privacy_mode.rs`
+- `RuView/v2/crates/wifi-densepose-bfld/src/privacy_gate.rs`
+- `RuView/v2/crates/wifi-densepose-bfld/src/identity_risk.rs`
+- `RuView/v2/crates/wifi-densepose-bfld/src/frame.rs`
 
 ## Deliverable Map
 

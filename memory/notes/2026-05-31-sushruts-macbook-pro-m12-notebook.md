@@ -2,7 +2,7 @@
 
 - Node: `sushruts-macbook-pro`
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master` at `cf2f0f4` before this worker commit
 - Owned scope: `docs/porting/worldgraph-privacy.md`, `notebooks/13_worldgraph_privacy_provenance.ipynb`, `tests/unit/test_notebook_json.py`
 

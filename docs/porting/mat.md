@@ -7,32 +7,32 @@ invariants without claiming emergency-response production readiness.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/lib.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/disaster_event.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/scan_zone.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/survivor.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/vital_signs.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/coordinates.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/triage.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/alert.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/domain/events.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/detection/breathing.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/detection/heartbeat.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/detection/movement.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/detection/ensemble.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/detection/pipeline.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/localization/triangulation.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/localization/depth.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/localization/fusion.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/localization/range_constraint.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/tracking/tracker.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/tracking/lifecycle.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/tracking/fingerprint.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/alerting/generator.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/alerting/dispatcher.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-mat/src/alerting/triage_service.rs`
+- `ruview-python/plan.md`
+- `RuView/v2/crates/wifi-densepose-mat/README.md`
+- `RuView/v2/crates/wifi-densepose-mat/src/lib.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/disaster_event.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/scan_zone.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/survivor.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/vital_signs.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/coordinates.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/triage.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/alert.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/domain/events.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/detection/breathing.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/detection/heartbeat.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/detection/movement.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/detection/ensemble.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/detection/pipeline.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/localization/triangulation.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/localization/depth.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/localization/fusion.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/localization/range_constraint.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/tracking/tracker.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/tracking/lifecycle.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/tracking/fingerprint.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/alerting/generator.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/alerting/dispatcher.rs`
+- `RuView/v2/crates/wifi-densepose-mat/src/alerting/triage_service.rs`
 
 ## Deliverable Map
 

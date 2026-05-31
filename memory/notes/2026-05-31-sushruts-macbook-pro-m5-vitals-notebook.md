@@ -2,7 +2,7 @@
 
 - Node: sushruts-macbook-pro
 - Device: Sushrut's MacBook Pro
-- Repo: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo: `ruview-python`
 - Branch: `master`
 - Worker scope: Milestone 5 notebook/docs only; avoided `src/ruview/vitals/*` because another worker owns the core vitals modules.
 

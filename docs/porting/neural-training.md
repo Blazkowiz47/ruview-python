@@ -8,25 +8,25 @@ of the default dependency set.
 
 ## Source References
 
-- `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/tensor.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/densepose.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/translator.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/inference.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-nn/src/rf_encoder.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/README.md`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/config.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/dataset.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/subcarrier.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/model.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/trainer.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/losses.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/metrics.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-train/src/signal_features.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/dataset.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/adaptive_classifier.rs`
-- `/Users/sushrutpatwardhan/1Projects/RuView/v2/crates/wifi-densepose-sensing-server/src/model_manager.rs`
+- `ruview-python/plan.md`
+- `RuView/v2/crates/wifi-densepose-nn/README.md`
+- `RuView/v2/crates/wifi-densepose-nn/src/tensor.rs`
+- `RuView/v2/crates/wifi-densepose-nn/src/densepose.rs`
+- `RuView/v2/crates/wifi-densepose-nn/src/translator.rs`
+- `RuView/v2/crates/wifi-densepose-nn/src/inference.rs`
+- `RuView/v2/crates/wifi-densepose-nn/src/rf_encoder.rs`
+- `RuView/v2/crates/wifi-densepose-train/README.md`
+- `RuView/v2/crates/wifi-densepose-train/src/config.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/dataset.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/subcarrier.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/model.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/trainer.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/losses.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/metrics.rs`
+- `RuView/v2/crates/wifi-densepose-train/src/signal_features.rs`
+- `RuView/v2/crates/wifi-densepose-sensing-server/src/dataset.rs`
+- `RuView/v2/crates/wifi-densepose-sensing-server/src/adaptive_classifier.rs`
+- `RuView/v2/crates/wifi-densepose-sensing-server/src/model_manager.rs`
 
 ## Deliverable Map
 

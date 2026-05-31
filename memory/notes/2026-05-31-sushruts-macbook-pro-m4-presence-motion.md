@@ -4,7 +4,7 @@
 
 - Node: sushruts-macbook-pro-m4
 - Device/server: local macOS workspace
-- Repo path: `/Users/sushrutpatwardhan/1Projects/ruview-python`
+- Repo path: `ruview-python`
 - Branch/base: `master`, Milestone 3 completion commit `6956689`
 - Worker: G, Milestone 4 presence/motion slice
 

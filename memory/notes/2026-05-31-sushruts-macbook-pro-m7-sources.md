@@ -6,7 +6,7 @@ node: sushruts-macbook-pro
 node_type: laptop
 device: Sushrut's MacBook Pro
 timezone: Europe/Oslo
-repo_path: /Users/sushrutpatwardhan/1Projects/ruview-python
+repo_path: ruview-python
 branch: master
 commit: worker commit `Add sensing server sources`
 sync_status: draft
@@ -28,8 +28,8 @@ tags: [phd, research, ruview, wifi-densepose, python, sensing-server]
 
 ## Source Reference
 
-- Plan: `/Users/sushrutpatwardhan/1Projects/ruview-python/plan.md` Milestone 7.
-- Reference repo: `/Users/sushrutpatwardhan/1Projects/RuView`
+- Plan: `ruview-python/plan.md` Milestone 7.
+- Reference repo: `RuView`
 - Rust sources sampled: `v2/crates/wifi-densepose-sensing-server/src/types.rs`, `csi.rs`, and `recording.rs`.
 
 ## Verification
