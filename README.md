@@ -21,6 +21,10 @@ store flows, cloud distribution, smart-home polish, or commercial packaging.
 See [plan.md](plan.md) for the completed capability-by-capability porting
 roadmap.
 
+For a first-pass explanation of the detection pipeline, diagrams, notebook
+entry points, and current limitations, see
+[docs/detection-workings.md](docs/detection-workings.md).
+
 ## Project Goals
 
 - Preserve important RuView / WiFi-DensePose data contracts and wire formats.
